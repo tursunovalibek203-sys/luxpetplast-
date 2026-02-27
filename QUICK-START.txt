@@ -1,0 +1,135 @@
+═══════════════════════════════════════════════════════════════
+    LP PLAST - TEZKOR BOSHLASH
+═══════════════════════════════════════════════════════════════
+
+🚀 SAYTNI ISHGA TUSHIRISH UCHUN 3 QADAM:
+
+┌─────────────────────────────────────────────────────────────┐
+│  1-QADAM: RASMLARNI TEKSHIRISH                              │
+└─────────────────────────────────────────────────────────────┘
+
+Brauzerda oching: check-images.html
+
+Bu sahifa:
+✓ Qaysi rasmlar mavjudligini ko'rsatadi
+✓ Qaysi rasmlar yo'qligini ko'rsatadi
+✓ Mavjud rasmlarning preview'ini ko'rsatadi
+
+┌─────────────────────────────────────────────────────────────┐
+│  2-QADAM: RASMLARNI QO'SHISH                                │
+└─────────────────────────────────────────────────────────────┘
+
+VARIANT A - Visual Qo'llanma (Tavsiya etiladi):
+   Brauzerda oching: image-guide.html
+   
+   Bu sahifada:
+   • Barcha kerakli rasmlar ro'yxati
+   • Har bir rasm uchun aniq fayl yo'li
+   • Qidiruv kalit so'zlari
+   • Batafsil ko'rsatmalar
+
+VARIANT B - Matnli Ko'rsatmalar:
+   Oching: RASMLAR_KORISATMA.txt
+   
+   Bu faylda:
+   • Qadam-baqadam ko'rsatmalar
+   • Fayl nomlari va yo'llar
+   • Rasm talablari
+   • Qidiruv maslahatlar
+
+┌─────────────────────────────────────────────────────────────┐
+│  3-QADAM: SAYTNI OCHISH                                     │
+└─────────────────────────────────────────────────────────────┘
+
+Brauzerda oching: index.html
+
+Sayt tayyor! 🎉
+
+═══════════════════════════════════════════════════════════════
+MINIMAL RASMLAR (Eng muhim 8 ta rasm):
+═══════════════════════════════════════════════════════════════
+
+Agar vaqtingiz kam bo'lsa, faqat shu 8 ta rasmni qo'shing:
+
+1. images/products/pet-preforms.jpg
+2. images/products/pp-caps.jpg
+3. images/products/handles.jpg
+4. images/gallery/factory-exterior-1.jpg
+5. images/gallery/production-line-1.jpg
+6. images/gallery/injection-machine-1.jpg
+7. images/gallery/pet-preforms-variety.jpg
+8. images/quality/lab-testing.jpg
+
+Bu rasmlar bilan sayt to'liq ishlaydi!
+
+═══════════════════════════════════════════════════════════════
+RASM QIDIRISH UCHUN KALIT SO'ZLAR:
+═══════════════════════════════════════════════════════════════
+
+Google Images da qidiring:
+
+🔍 "PET preform manufacturing"
+🔍 "injection molding machine"
+🔍 "plastic bottle preform"
+🔍 "PP caps production"
+🔍 "plastic factory production line"
+🔍 "quality control laboratory"
+
+═══════════════════════════════════════════════════════════════
+BEPUL RASM SAYTLARI:
+═══════════════════════════════════════════════════════════════
+
+🌐 Unsplash.com - Professional photos
+🌐 Pexels.com - Free stock photos
+🌐 Pixabay.com - Free images
+
+═══════════════════════════════════════════════════════════════
+YORDAM FAYLLARI:
+═══════════════════════════════════════════════════════════════
+
+📄 check-images.html       - Rasmlarni tekshirish
+📄 image-guide.html        - Visual qo'llanma
+📄 RASMLAR_KORISATMA.txt   - Batafsil ko'rsatmalar
+📄 images/README.txt       - Texnik ma'lumot
+
+═══════════════════════════════════════════════════════════════
+SAYT SAHIFALARI:
+═══════════════════════════════════════════════════════════════
+
+✓ index.html           - Bosh sahifa
+✓ about.html           - Biz haqimizda
+✓ products.html        - Mahsulotlar
+✓ gallery.html         - Galeriya
+✓ quality.html         - Sifat nazorati
+✓ clients.html         - Hamkorlar
+✓ calculator.html      - Narx kalkulyatori
+✓ quote.html           - Narx so'rash
+✓ contact.html         - Kontaktlar
+✓ blog.html            - Blog
+✓ career.html          - Karyera
+✓ capacity.html        - Ishlab chiqarish quvvati
+✓ faq.html             - Savol-javob
+✓ specifications.html  - Texnik spetsifikatsiyalar
+
+═══════════════════════════════════════════════════════════════
+MUAMMO YUZAGA KELSA:
+═══════════════════════════════════════════════════════════════
+
+❓ Rasmlar ko'rinmayapti?
+   → Fayl nomini tekshiring (kichik harflar)
+   → Papka yo'lini tekshiring
+   → Brauzerda F5 bosib yangilang
+
+❓ Qaysi rasmlar kerak?
+   → check-images.html ni oching
+
+❓ Qanday rasmlar qidirish kerak?
+   → image-guide.html ni oching
+
+═══════════════════════════════════════════════════════════════
+
+MUVAFFAQIYATLAR! 🚀
+
+Saytingiz professional va zamonaviy ko'rinishda tayyor!
+
+═══════════════════════════════════════════════════════════════

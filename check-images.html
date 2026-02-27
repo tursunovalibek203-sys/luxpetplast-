@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rasm Tekshirish - LP Plast</title>
+    <link rel="stylesheet" href="styles-new.css">
+    <style>
+        .checker-container {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+        .check-item {
+            display: flex;
+            align-items: center;
+            padding: 15px;
+            margin: 10px 0;
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(10px);
+            border-radius: 8px;
+            border-left: 4px solid #ccc;
+        }
+        .check-item.exists {
+            border-left-color: #4CAF50;
+        }
+        .check-item.missing {
+            border-left-color: #E53935;
+        }
+        .status-icon {
+            font-size: 24px;
+            margin-right: 15px;
+            min-width: 30px;
+        }
+        .file-info {
+            flex: 1;
+        }
+        .file-path {
+            font-family: monospace;
+            font-size: 14px;
+            color: #666;
+        }
+        .file-name {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        .preview-box {
+            width: 80px;
+            height: 80px;
+            border-radius: 4px;
+            overflow: hidden;
+            margin-left: 15px;
+        }
+        .preview-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .summary {
+            background: linear-gradient(135deg, #1E88E5 0%, #E53935 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        .summary h2 {
+            margin: 0 0 10px 0;
+        }
+        .category-section {
+            margin: 30px 0;
+        }
+        .category-title {
+            font-size: 24px;
+            margin-bottom: 15px;
+            color: #1E88E5;
+        }
+    </style>
+</head>
+<body>
+    <div class="checker-container">
+        <div class="summary">
+            <h2>🖼️ Rasm Tekshirish Tizimi</h2>
+            <p>Quyida barcha kerakli rasmlar ro'yxati va ularning holati ko'rsatilgan</p>
+            <p id="summary-text">Tekshirilmoqda...</p>
+        </div>
+
+        <!-- Products -->
+        <div class="category-section">
+            <h2 class="category-title">📦 Mahsulot Rasmlari</h2>
+            <div id="products-list"></div>
+        </div>
+
+        <!-- Gallery -->
+        <div class="category-section">
+            <h2 class="category-title">🏭 Galeriya Rasmlari</h2>
+            <div id="gallery-list"></div>
+        </div>
+
+        <!-- Quality -->
+        <div class="category-section">
+            <h2 class="category-title">🔬 Sifat Nazorati</h2>
+            <div id="quality-list"></div>
+        </div>
+
+        <div style="text-align: center; margin-top: 40px; padding: 20px; background: rgba(30, 136, 229, 0.1); border-radius: 8px;">
+            <h3>📋 Keyingi Qadamlar</h3>
+            <p>Qizil (❌) belgili rasmlarni qo'shish kerak</p>
+            <a href="image-guide.html" class="btn btn-primary" style="margin: 10px;">Rasm Qo'llanma</a>
+            <a href="RASMLAR_KORISATMA.txt" class="btn btn-secondary" style="margin: 10px;">Ko'rsatmalar</a>
+        </div>
+    </div>
+
+    <script>
+        const images = {
+            products: [
+                { path: 'images/products/pet-preforms.jpg', name: 'PET Preformlar', desc: 'Asosiy mahsulot rasmi' },
+                { path: 'images/products/pp-caps.jpg', name: 'PP Qopqoqlar', desc: 'Qopqoqlar to\'plami' },
+                { path: 'images/products/handles.jpg', name: 'Tutqichlar', desc: 'Tutqichlar to\'plami' }
+            ],
+            gallery: [
+                { path: 'images/gallery/factory-exterior-1.jpg', name: 'Zavod Binosi', desc: 'Tashqi ko\'rinish' },
+                { path: 'images/gallery/production-line-1.jpg', name: 'Ishlab Chiqarish', desc: 'Ishlab chiqarish liniyasi' },
+                { path: 'images/gallery/injection-machine-1.jpg', name: 'Injection Mashina', desc: 'Uskunalar' },
+                { path: 'images/gallery/pet-preforms-variety.jpg', name: 'Mahsulot Xilma-xilligi', desc: 'Turli preformlar' }
+            ],
+            quality: [
+                { path: 'images/quality/lab-testing.jpg', name: 'Laboratoriya', desc: 'Sifat nazorati' }
+            ]
+        };
+
+        let totalImages = 0;
+        let existingImages = 0;
+
+        function checkImage(imagePath) {
+            return new Promise((resolve) => {
+                const img = new Image();
+                img.onload = () => resolve(true);
+                img.onerror = () => resolve(false);
+                img.src = imagePath;
+            });
+        }
+
+        async function createCheckItem(imageInfo, container) {
+            totalImages++;
+            const exists = await checkImage(imageInfo.path);
+            if (exists) existingImages++;
+
+            const item = document.createElement('div');
+            item.className = `check-item ${exists ? 'exists' : 'missing'}`;
+            
+            item.innerHTML = `
+                <div class="status-icon">${exists ? '✅' : '❌'}</div>
+                <div class="file-info">
+                    <div class="file-name">${imageInfo.name}</div>
+                    <div class="file-path">${imageInfo.path}</div>
+                    <div style="font-size: 12px; color: #999; margin-top: 3px;">${imageInfo.desc}</div>
+                </div>
+                ${exists ? `<div class="preview-box"><img src="${imageInfo.path}" alt="${imageInfo.name}"></div>` : ''}
+            `;
+            
+            container.appendChild(item);
+        }
+
+        async function checkAllImages() {
+            const productsList = document.getElementById('products-list');
+            const galleryList = document.getElementById('gallery-list');
+            const qualityList = document.getElementById('quality-list');
+
+            for (const img of images.products) {
+                await createCheckItem(img, productsList);
+            }
+
+            for (const img of images.gallery) {
+                await createCheckItem(img, galleryList);
+            }
+
+            for (const img of images.quality) {
+                await createCheckItem(img, qualityList);
+            }
+
+            const summaryText = document.getElementById('summary-text');
+            const missingCount = totalImages - existingImages;
+            
+            if (missingCount === 0) {
+                summaryText.innerHTML = `
+                    <strong style="font-size: 24px;">🎉 Ajoyib!</strong><br>
+                    Barcha ${totalImages} ta rasm mavjud!
+                `;
+            } else {
+                summaryText.innerHTML = `
+                    <strong style="font-size: 20px;">${existingImages} / ${totalImages} ta rasm mavjud</strong><br>
+                    ${missingCount} ta rasm qo'shish kerak
+                `;
+            }
+        }
+
+        checkAllImages();
+    </script>
+</body>
+</html>

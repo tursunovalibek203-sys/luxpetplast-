@@ -1,0 +1,17 @@
+﻿<svg width="800" height="600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="grad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#E53935;stop-opacity:0.3" />
+      <stop offset="100%" style="stop-color:#1E88E5;stop-opacity:0.3" />
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#grad2)"/>
+  <circle cx="250" cy="280" r="80" fill="#E53935" opacity="0.7"/>
+  <circle cx="400" cy="280" r="80" fill="#E53935" opacity="0.8"/>
+  <circle cx="550" cy="280" r="80" fill="#E53935" opacity="0.9"/>
+  <rect x="220" y="240" width="60" height="20" fill="#fff" opacity="0.5"/>
+  <rect x="370" y="240" width="60" height="20" fill="#fff" opacity="0.5"/>
+  <rect x="520" y="240" width="60" height="20" fill="#fff" opacity="0.5"/>
+  <text x="400" y="480" font-family="Arial" font-size="32" fill="#E53935" text-anchor="middle" font-weight="bold">PP QOPQOQLAR</text>
+  <text x="400" y="520" font-family="Arial" font-size="18" fill="#666" text-anchor="middle">Mustahkam va Chidamli</text>
+</svg>

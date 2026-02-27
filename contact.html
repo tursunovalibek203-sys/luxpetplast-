@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontaktlar - Biz Bilan Bog'laning | LUX PET PLAST</title>
+    <meta name="description" content="LUX PET PLAST bilan bog'lanish. Telefon, email, manzil va ish vaqti. Professional konsultatsiya va tezkor javob.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles-professional.css">
+    <link rel="stylesheet" href="chatbot.css">
+    
+    <!-- Scripts -->
+    <script src="simple-language.js"></script>
+    
+    <style>
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+        
+        .contact-info-cards {
+            display: grid;
+            gap: 1.5rem;
+        }
+        
+        .contact-card {
+            background: white;
+            border-radius: 16px;
+            padding: 2rem;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            display: flex;
+            gap: 1.5rem;
+            transition: all 0.3s ease;
+        }
+        
+        .contact-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+        }
+        
+        .contact-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.75rem;
+            flex-shrink: 0;
+        }
+        
+        .contact-details h4 {
+            font-size: 1.125rem;
+            font-weight: 700;
+            color: var(--primary-dark);
+            margin: 0 0 0.75rem 0;
+        }
+        
+        .contact-details p {
+            color: var(--text-secondary);
+            margin: 0.25rem 0;
+            font-size: 0.9375rem;
+        }
+        
+        .contact-details a {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 600;
+        }
+        
+        .contact-form-card {
+            background: white;
+            border-radius: 24px;
+            padding: 3rem;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-group label {
+            display: block;
+            font-weight: 600;
+            color: var(--primary-dark);
+            margin-bottom: 0.5rem;
+            font-size: 0.9375rem;
+        }
+        
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 0.875rem 1.25rem;
+            border: 2px solid #e2e8f0;
+            border-radius: 12px;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+        }
+        
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+        
+        .btn-submit {
+            width: 100%;
+            padding: 1rem 2rem;
+            background: linear-gradient(135deg, var(--primary), #2563eb);
+            color: white;
+            border: none;
+            border-radius: 12px;
+            font-size: 1.0625rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-submit:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(59, 130, 246, 0.3);
+        }
+        
+        .departments-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .dept-card {
+            background: white;
+            border-radius: 16px;
+            padding: 2rem;
+            text-align: center;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+        }
+        
+        .dept-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+        }
+        
+        .dept-icon {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 1.5rem;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+        }
+        
+        @media (max-width: 768px) {
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .departments-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ============================================
+         HEADER - Professional Navigation
+         ============================================ -->
+    <header class="header" id="header">
+        <nav class="nav">
+            <div class="container">
+                <a href="index.html" class="nav-brand">
+                    <img src="images/logo-lpplast.jpg" alt="LUX PET PLAST" class="logo">
+                    <span class="brand-name">LUX PET PLAST</span>
+                </a>
+                
+                <button class="mobile-menu-btn" aria-label="Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link" data-i18n="nav_home">Bosh sahifa</a></li>
+                    <li><a href="quality.html" class="nav-link" data-i18n="nav_quality">Sifat</a></li>
+                    <li><a href="about.html" class="nav-link" data-i18n="nav_about">Biz haqimizda</a></li>
+                    <li><a href="contact.html" class="nav-link active" data-i18n="nav_contact">Kontaktlar</a></li>
+                    
+                    <li class="language-switcher">
+                        <button class="lang-btn active" data-lang="uz">O'zb</button>
+                        <button class="lang-btn" data-lang="ru">Рус</button>
+                        <button class="lang-btn" data-lang="en">Eng</button>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- ============================================
+         PAGE HEADER
+         ============================================ -->
+    <section class="page-header-corporate">
+        <div class="container">
+            <div class="page-header-content">
+                <span class="page-badge" data-i18n="contact_badge">Biz Bilan Bog'laning</span>
+                <h1 class="page-title" data-i18n="contact_title">Kontaktlar</h1>
+                <p class="page-description" data-i18n="contact_description">
+                    Professional konsultatsiya va tezkor javob. Bizning mutaxassislarimiz sizning barcha savollaringizga javob berishga tayyor.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         CONTACT SECTION
+         ============================================ -->
+    <section class="section" style="padding: 5rem 0;">
+        <div class="container">
+            <div class="contact-grid">
+                <!-- Contact Info -->
+                <div class="contact-info-cards">
+                    <div class="contact-card">
+                        <div class="contact-icon" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white;">
+                            📞
+                        </div>
+                        <div class="contact-details">
+                            <h4 data-i18n="contact_phone_title">Telefon Raqamlar</h4>
+                            <p><a href="tel:+998901234567">+998 90 123 45 67</a></p>
+                            <p><a href="tel:+998712345678">+998 71 234 56 78</a></p>
+                            <p style="font-size: 0.875rem; color: var(--text-muted); margin-top: 0.5rem;" data-i18n="contact_phone_time">Dushanba-Juma: 9:00-18:00</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-card">
+                        <div class="contact-icon" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); color: white;">
+                            📧
+                        </div>
+                        <div class="contact-details">
+                            <h4 data-i18n="contact_email_title">Email Manzillar</h4>
+                            <p><a href="mailto:info@petpreform.uz">info@petpreform.uz</a></p>
+                            <p><a href="mailto:sales@petpreform.uz">sales@petpreform.uz</a></p>
+                            <p style="font-size: 0.875rem; color: var(--text-muted); margin-top: 0.5rem;" data-i18n="contact_email_time">24/7 javob beramiz</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-card">
+                        <div class="contact-icon" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); color: white;">
+                            💬
+                        </div>
+                        <div class="contact-details">
+                            <h4 data-i18n="contact_messenger_title">Messenger</h4>
+                            <p><a href="https://t.me/petpreform_uz" target="_blank">Telegram: @petpreform_uz</a></p>
+                            <p><a href="https://wa.me/998901234567" target="_blank">WhatsApp: +998 90 123 45 67</a></p>
+                            <p style="font-size: 0.875rem; color: var(--text-muted); margin-top: 0.5rem;" data-i18n="contact_messenger_time">Tezkor javob</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-card">
+                        <div class="contact-icon" style="background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%); color: white;">
+                            📍
+                        </div>
+                        <div class="contact-details">
+                            <h4 data-i18n="contact_address_title">Manzil</h4>
+                            <p data-i18n="contact_address_line1">Toshkent shahri, Sergeli tumani</p>
+                            <p data-i18n="contact_address_line2">Sanoat ko'chasi, 15-uy</p>
+                            <p style="font-size: 0.875rem; color: var(--text-muted); margin-top: 0.5rem;" data-i18n="contact_address_desc">Zavod va ofis</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Contact Form -->
+                <div class="contact-form-card">
+                    <h3 style="font-size: 1.75rem; font-weight: 700; color: var(--primary-dark); margin-bottom: 0.75rem;" data-i18n="contact_form_title">Tezkor Murojaat</h3>
+                    <p style="color: var(--text-secondary); margin-bottom: 2rem;" data-i18n="contact_form_desc">Savolingizni yuboring, 24 soat ichida javob beramiz</p>
+                    
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name" data-i18n="form_name">Ismingiz *</label>
+                            <input type="text" id="name" name="name" required placeholder="Ismingizni kiriting">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone" data-i18n="form_phone">Telefon *</label>
+                            <input type="tel" id="phone" name="phone" required placeholder="+998 90 123 45 67">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email" data-i18n="form_email">Email</label>
+                            <input type="email" id="email" name="email" placeholder="email@example.com">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="subject" data-i18n="form_subject">Mavzu *</label>
+                            <select id="subject" name="subject" required>
+                                <option value="">Mavzuni tanlang</option>
+                                <option value="product" data-i18n="form_subject_product">Mahsulot haqida</option>
+                                <option value="price" data-i18n="form_subject_price">Narx so'rash</option>
+                                <option value="technical" data-i18n="form_subject_technical">Texnik yordam</option>
+                                <option value="partnership" data-i18n="form_subject_partnership">Hamkorlik</option>
+                                <option value="other" data-i18n="form_subject_other">Boshqa</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message" data-i18n="form_message">Xabar *</label>
+                            <textarea id="message" name="message" required placeholder="Savolingizni yoki xabaringizni kiriting"></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn-submit" data-i18n="form_submit">Xabar Yuborish</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         DEPARTMENTS
+         ============================================ -->
+    <section class="section" style="background: var(--gray-50); padding: 5rem 0;">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <span class="section-badge" data-i18n="dept_badge">Bo'limlar</span>
+                <h2 class="section-title" data-i18n="dept_title">Bizning Bo'limlarimiz</h2>
+                <p class="section-description" data-i18n="dept_description">
+                    Har bir bo'lim o'z sohasida professional xizmat ko'rsatadi
+                </p>
+            </div>
+            
+            <div class="departments-grid">
+                <div class="dept-card">
+                    <div class="dept-icon" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white;">💼</div>
+                    <h4 style="font-size: 1.25rem; font-weight: 700; color: var(--primary-dark); margin-bottom: 1rem;" data-i18n="dept_sales_title">Sotuvlar Bo'limi</h4>
+                    <p style="color: var(--text-secondary); margin-bottom: 0.5rem;">📞 +998 90 123 45 67</p>
+                    <p style="color: var(--text-secondary); margin-bottom: 1rem;">📧 sales@petpreform.uz</p>
+                    <p style="font-size: 0.875rem; color: var(--text-muted);" data-i18n="dept_sales_desc">Buyurtmalar va narx so'rash</p>
+                </div>
+                
+                <div class="dept-card">
+                    <div class="dept-icon" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); color: white;">🔧</div>
+                    <h4 style="font-size: 1.25rem; font-weight: 700; color: var(--primary-dark); margin-bottom: 1rem;" data-i18n="dept_tech_title">Texnik Yordam</h4>
+                    <p style="color: var(--text-secondary); margin-bottom: 0.5rem;">📞 +998 90 234 56 78</p>
+                    <p style="color: var(--text-secondary); margin-bottom: 1rem;">📧 support@petpreform.uz</p>
+                    <p style="font-size: 0.875rem; color: var(--text-muted);" data-i18n="dept_tech_desc">Texnik masalalar va konsultatsiya</p>
+                </div>
+                
+                <div class="dept-card">
+                    <div class="dept-icon" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); color: white;">🏭</div>
+                    <h4 style="font-size: 1.25rem; font-weight: 700; color: var(--primary-dark); margin-bottom: 1rem;" data-i18n="dept_production_title">Ishlab Chiqarish</h4>
+                    <p style="color: var(--text-secondary); margin-bottom: 0.5rem;">📞 +998 90 345 67 89</p>
+                    <p style="color: var(--text-secondary); margin-bottom: 1rem;">📧 production@petpreform.uz</p>
+                    <p style="font-size: 0.875rem; color: var(--text-muted);" data-i18n="dept_production_desc">Buyurtma holati va yetkazish</p>
+                </div>
+                
+                <div class="dept-card">
+                    <div class="dept-icon" style="background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%); color: white;">👥</div>
+                    <h4 style="font-size: 1.25rem; font-weight: 700; color: var(--primary-dark); margin-bottom: 1rem;" data-i18n="dept_hr_title">Kadrlar Bo'limi</h4>
+                    <p style="color: var(--text-secondary); margin-bottom: 0.5rem;">📞 +998 90 456 78 90</p>
+                    <p style="color: var(--text-secondary); margin-bottom: 1rem;">📧 hr@petpreform.uz</p>
+                    <p style="font-size: 0.875rem; color: var(--text-muted);" data-i18n="dept_hr_desc">Ish o'rinlari va karyera</p>
+                </div>
+                
+                <div class="dept-card">
+                    <div class="dept-icon" style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%); color: white;">💰</div>
+                    <h4 style="font-size: 1.25rem; font-weight: 700; color: var(--primary-dark); margin-bottom: 1rem;" data-i18n="dept_finance_title">Moliya Bo'limi</h4>
+                    <p style="color: var(--text-secondary); margin-bottom: 0.5rem;">📞 +998 90 567 89 01</p>
+                    <p style="color: var(--text-secondary); margin-bottom: 1rem;">📧 finance@petpreform.uz</p>
+                    <p style="font-size: 0.875rem; color: var(--text-muted);" data-i18n="dept_finance_desc">To'lovlar va hisob-kitoblar</p>
+                </div>
+                
+                <div class="dept-card">
+                    <div class="dept-icon" style="background: linear-gradient(135deg, #30cfd0 0%, #330867 100%); color: white;">🎯</div>
+                    <h4 style="font-size: 1.25rem; font-weight: 700; color: var(--primary-dark); margin-bottom: 1rem;" data-i18n="dept_ceo_title">Bosh Direktor</h4>
+                    <p style="color: var(--text-secondary); margin-bottom: 0.5rem;">📞 +998 90 678 90 12</p>
+                    <p style="color: var(--text-secondary); margin-bottom: 1rem;">📧 ceo@petpreform.uz</p>
+                    <p style="font-size: 0.875rem; color: var(--text-muted);" data-i18n="dept_ceo_desc">Strategik hamkorlik</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         WORKING HOURS
+         ============================================ -->
+    <section class="section" style="padding: 5rem 0;">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <span class="section-badge" data-i18n="hours_badge">Ish Vaqti</span>
+                <h2 class="section-title" data-i18n="hours_title">Ish Vaqti va Xizmatlar</h2>
+                <p class="section-description" data-i18n="hours_description">
+                    Biz sizga qulay vaqtda xizmat ko'rsatishga tayyormiz
+                </p>
+            </div>
+            
+            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; margin-top: 3rem;">
+                <div class="card-corporate">
+                    <h4 style="font-size: 1.25rem; font-weight: 700; color: var(--primary-dark); margin-bottom: 1.5rem; text-align: center;" data-i18n="hours_office_title">Ofis Ish Vaqti</h4>
+                    <div style="display: flex; flex-direction: column; gap: 1rem;">
+                        <div style="display: flex; justify-content: space-between; padding: 0.75rem; background: var(--gray-50); border-radius: 8px;">
+                            <span style="font-weight: 600; color: var(--primary-dark);">Dushanba - Juma</span>
+                            <span style="color: var(--primary);">9:00 - 18:00</span>
+                        </div>
+                        <div style="display: flex; justify-content: space-between; padding: 0.75rem; background: var(--gray-50); border-radius: 8px;">
+                            <span style="font-weight: 600; color: var(--primary-dark);">Shanba</span>
+                            <span style="color: var(--primary);">9:00 - 14:00</span>
+                        </div>
+                        <div style="display: flex; justify-content: space-between; padding: 0.75rem; background: var(--gray-50); border-radius: 8px;">
+                            <span style="font-weight: 600; color: var(--primary-dark);">Yakshanba</span>
+                            <span style="color: var(--text-muted);">Dam olish</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card-corporate">
+                    <h4 style="font-size: 1.25rem; font-weight: 700; color: var(--primary-dark); margin-bottom: 1.5rem; text-align: center;" data-i18n="hours_factory_title">Zavod Ish Vaqti</h4>
+                    <div style="display: flex; flex-direction: column; gap: 1rem;">
+                        <div style="display: flex; justify-content: space-between; padding: 0.75rem; background: var(--gray-50); border-radius: 8px;">
+                            <span style="font-weight: 600; color: var(--primary-dark);">Dushanba - Juma</span>
+                            <span style="color: var(--primary);">8:00 - 20:00</span>
+                        </div>
+                        <div style="display: flex; justify-content: space-between; padding: 0.75rem; background: var(--gray-50); border-radius: 8px;">
+                            <span style="font-weight: 600; color: var(--primary-dark);">Shanba</span>
+                            <span style="color: var(--primary);">8:00 - 16:00</span>
+                        </div>
+                        <div style="display: flex; justify-content: space-between; padding: 0.75rem; background: var(--gray-50); border-radius: 8px;">
+                            <span style="font-weight: 600; color: var(--primary-dark);">Yakshanba</span>
+                            <span style="color: var(--text-muted);">Dam olish</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card-corporate" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white;">
+                    <h4 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 1.5rem; text-align: center; color: white;" data-i18n="hours_services_title">Tezkor Xizmatlar</h4>
+                    <div style="display: flex; flex-direction: column; gap: 1rem;">
+                        <div style="display: flex; align-items: center; gap: 0.75rem;">
+                            <span style="font-size: 1.5rem;">📞</span>
+                            <span style="font-size: 0.9375rem;">24/7 Telefon qo'llab-quvvatlash</span>
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 0.75rem;">
+                            <span style="font-size: 1.5rem;">📧</span>
+                            <span style="font-size: 0.9375rem;">Email orqali tezkor javob</span>
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 0.75rem;">
+                            <span style="font-size: 1.5rem;">💬</span>
+                            <span style="font-size: 0.9375rem;">Telegram/WhatsApp chat</span>
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 0.75rem;">
+                            <span style="font-size: 1.5rem;">🚚</span>
+                            <span style="font-size: 0.9375rem;">Tezkor yetkazib berish</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         MAP SECTION
+         ============================================ -->
+    <section class="section" style="background: var(--gray-50); padding: 5rem 0;">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <span class="section-badge" data-i18n="map_badge">Joylashuv</span>
+                <h2 class="section-title" data-i18n="map_title">Bizning Manzilimiz</h2>
+                <p class="section-description" data-i18n="map_description">
+                    Toshkent shahrida qulay joylashgan zamonaviy zavod va ofis
+                </p>
+            </div>
+            
+            <div style="margin-top: 3rem; background: white; border-radius: 24px; padding: 3rem; box-shadow: 0 10px 40px rgba(0,0,0,0.1);">
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center;">
+                    <div>
+                        <h3 style="font-size: 1.75rem; font-weight: 700; color: var(--primary-dark); margin-bottom: 1.5rem;">LUX PET PLAST Zavodi</h3>
+                        <div style="display: flex; flex-direction: column; gap: 1.25rem;">
+                            <div style="display: flex; gap: 1rem;">
+                                <span style="font-size: 1.5rem;">📍</span>
+                                <div>
+                                    <p style="font-weight: 600; color: var(--primary-dark); margin: 0 0 0.25rem 0;">Manzil:</p>
+                                    <p style="color: var(--text-secondary); margin: 0;">Toshkent shahri, Sergeli tumani</p>
+                                    <p style="color: var(--text-secondary); margin: 0;">Sanoat ko'chasi, 15-uy</p>
+                                </div>
+                            </div>
+                            
+                            <div style="display: flex; gap: 1rem;">
+                                <span style="font-size: 1.5rem;">🚗</span>
+                                <div>
+                                    <p style="font-weight: 600; color: var(--primary-dark); margin: 0 0 0.25rem 0;">Avtomobil bilan:</p>
+                                    <p style="color: var(--text-secondary); margin: 0;">Toshkent markazidan 25 daqiqa</p>
+                                </div>
+                            </div>
+                            
+                            <div style="display: flex; gap: 1rem;">
+                                <span style="font-size: 1.5rem;">🚌</span>
+                                <div>
+                                    <p style="font-weight: 600; color: var(--primary-dark); margin: 0 0 0.25rem 0;">Jamoat transporti:</p>
+                                    <p style="color: var(--text-secondary); margin: 0;">76, 89 avtobus marshrutlari</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <a href="https://maps.google.com" target="_blank" style="display: inline-flex; align-items: center; gap: 0.5rem; margin-top: 2rem; padding: 1rem 2rem; background: var(--primary); color: white; text-decoration: none; border-radius: 12px; font-weight: 600; transition: all 0.3s ease;">
+                            <span>Xaritada Ko'rish</span>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                <path d="M5 12h14M12 5l7 7-7 7"/>
+                            </svg>
+                        </a>
+                    </div>
+                    
+                    <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 16px; padding: 3rem; color: white; text-align: center;">
+                        <div style="font-size: 4rem; margin-bottom: 1rem;">🗺️</div>
+                        <h4 style="font-size: 1.5rem; font-weight: 700; margin-bottom: 1rem; color: white;">Google Maps</h4>
+                        <p style="margin-bottom: 2rem; opacity: 0.9;">Aniq manzil va yo'nalishni ko'rish uchun xaritani oching</p>
+                        <div style="background: rgba(255,255,255,0.2); padding: 1rem; border-radius: 12px;">
+                            <p style="font-size: 0.875rem; margin: 0; opacity: 0.9;">GPS Koordinatalar:</p>
+                            <p style="font-size: 1.125rem; font-weight: 600; margin: 0.5rem 0 0 0;">41.2044° N, 69.2813° E</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         FOOTER - Professional
+         ============================================ -->
+    <footer style="background: var(--primary-dark); color: white; padding: 4rem 0 2rem;">
+        <div class="container">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 3rem; margin-bottom: 3rem;">
+                <!-- Company Info -->
+                <div>
+                    <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem;">
+                        <img src="images/logo-lpplast.jpg" alt="LUX PET PLAST" style="height: 40px;">
+                        <span style="font-size: 1.5rem; font-weight: 800;">LUX PET PLAST</span>
+                    </div>
+                    <p style="color: rgba(255,255,255,0.7); line-height: 1.7; margin-bottom: 1.5rem;" data-i18n="footer_description">
+                        2018-yildan beri O'zbekiston va MDH davlatlariga yuqori sifatli PET preformalar, PP qopqoqlar va tutqichlar yetkazib beramiz.
+                    </p>
+                    <div style="display: flex; gap: 0.75rem;">
+                        <span style="background: rgba(255,255,255,0.1); padding: 0.375rem 0.75rem; border-radius: 6px; font-size: 0.75rem; font-weight: 600;">ISO 9001</span>
+                        <span style="background: rgba(255,255,255,0.1); padding: 0.375rem 0.75rem; border-radius: 6px; font-size: 0.75rem; font-weight: 600;">ISO 22000</span>
+                        <span style="background: rgba(255,255,255,0.1); padding: 0.375rem 0.75rem; border-radius: 6px; font-size: 0.75rem; font-weight: 600;">HACCP</span>
+                    </div>
+                </div>
+                
+                <!-- Quick Links -->
+                <div>
+                    <h4 style="font-size: 1.125rem; font-weight: 700; margin-bottom: 1.5rem;" data-i18n="footer_pages">Sahifalar</h4>
+                    <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.75rem;">
+                        <li><a href="about.html" style="color: rgba(255,255,255,0.7); text-decoration: none; transition: color 0.3s;" onmouseover="this.style.color='white'" onmouseout="this.style.color='rgba(255,255,255,0.7)'" data-i18n="nav_about">Biz haqimizda</a></li>
+                        <li><a href="products.html" style="color: rgba(255,255,255,0.7); text-decoration: none; transition: color 0.3s;" onmouseover="this.style.color='white'" onmouseout="this.style.color='rgba(255,255,255,0.7)'" data-i18n="nav_products">Mahsulotlar</a></li>
+                        <li><a href="quality.html" style="color: rgba(255,255,255,0.7); text-decoration: none; transition: color 0.3s;" onmouseover="this.style.color='white'" onmouseout="this.style.color='rgba(255,255,255,0.7)'" data-i18n="nav_quality">Sifat</a></li>
+                        <li><a href="contact.html" style="color: rgba(255,255,255,0.7); text-decoration: none; transition: color 0.3s;" onmouseover="this.style.color='white'" onmouseout="this.style.color='rgba(255,255,255,0.7)'" data-i18n="nav_contact">Kontaktlar</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Contact -->
+                <div>
+                    <h4 style="font-size: 1.125rem; font-weight: 700; margin-bottom: 1.5rem;" data-i18n="footer_contact">Kontakt</h4>
+                    <div style="display: flex; flex-direction: column; gap: 1rem;">
+                        <div style="display: flex; align-items: center; gap: 0.75rem;">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                            </svg>
+                            <span style="color: rgba(255,255,255,0.9);">+998 90 123 45 67</span>
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 0.75rem;">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                                <polyline points="22,6 12,13 2,6"/>
+                            </svg>
+                            <span style="color: rgba(255,255,255,0.9);">info@petpreform.uz</span>
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 0.75rem;">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                                <circle cx="12" cy="10" r="3"/>
+                            </svg>
+                            <span style="color: rgba(255,255,255,0.9);" data-i18n="common_location">Toshkent, O'zbekiston</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Bottom -->
+            <div style="border-top: 1px solid rgba(255,255,255,0.1); padding-top: 2rem; text-align: center;">
+                <p style="color: rgba(255,255,255,0.6); font-size: 0.875rem;">
+                    &copy; 2024 LUX PET PLAST. <span data-i18n="footer_rights">Barcha huquqlar himoyalangan.</span>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="simple-language.js"></script>
+    <script src="professional-interactions.js"></script>
+    <script src="chatbot.js"></script>
+    <script>
+        // Contact Form Handler
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form data
+            const formData = {
+                name: document.getElementById('name').value,
+                phone: document.getElementById('phone').value,
+                email: document.getElementById('email').value,
+                subject: document.getElementById('subject').value,
+                message: document.getElementById('message').value
+            };
+            
+            // Here you would normally send the data to your server
+            console.log('Form submitted:', formData);
+            
+            // Show success message
+            alert('Xabaringiz muvaffaqiyatli yuborildi! Tez orada siz bilan bog\'lanamiz.');
+            
+            // Reset form
+            this.reset();
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rasm Qo'llanma - LP Plast</title>
+    <link rel="stylesheet" href="styles-new.css">
+    <style>
+        .guide-container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+        .guide-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .image-section {
+            margin-bottom: 60px;
+        }
+        .image-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .image-placeholder {
+            border: 2px dashed #1E88E5;
+            border-radius: 8px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(10px);
+        }
+        .placeholder-preview {
+            width: 100%;
+            height: 200px;
+            background: linear-gradient(135deg, #1E88E5 0%, #E53935 100%);
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 48px;
+            margin-bottom: 15px;
+        }
+        .placeholder-info h3 {
+            margin: 10px 0;
+            color: #1E88E5;
+        }
+        .placeholder-info p {
+            margin: 5px 0;
+            font-size: 14px;
+            color: #666;
+        }
+        .file-path {
+            background: #f5f5f5;
+            padding: 8px;
+            border-radius: 4px;
+            font-family: monospace;
+            font-size: 12px;
+            margin-top: 10px;
+        }
+        .status-missing {
+            color: #E53935;
+            font-weight: bold;
+        }
+        .status-exists {
+            color: #4CAF50;
+            font-weight: bold;
+        }
+        .instructions {
+            background: rgba(30, 136, 229, 0.1);
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+        }
+        .instructions ol {
+            margin-left: 20px;
+        }
+        .instructions li {
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="guide-container">
+        <div class="guide-header">
+            <h1>🖼️ LP Plast - Rasm Qo'llanma</h1>
+            <p>Sayt uchun kerakli barcha rasmlar ro'yxati va joylashuv yo'llari</p>
+        </div>
+
+        <div class="instructions">
+            <h2>📋 Rasmlarni Qo'shish Qadamlari:</h2>
+            <ol>
+                <li><strong>Rasmlarni tayyorlang:</strong> Google Images, Unsplash yoki o'z rasmlaringizdan foydalaning</li>
+                <li><strong>Rasm o'lchamini tekshiring:</strong> Kamida 800x600 piksel, JPG yoki PNG format</li>
+                <li><strong>Fayl nomini to'g'ri yozing:</strong> Quyidagi jadvalda ko'rsatilgan nom bilan saqlang</li>
+                <li><strong>To'g'ri papkaga joylashtiring:</strong> Har bir rasm uchun ko'rsatilgan yo'lga saqlang</li>
+                <li><strong>Saytni yangilang:</strong> Brauzerda F5 bosing va rasmlar paydo bo'lishini tekshiring</li>
+            </ol>
+        </div>
+
+        <!-- Products Section -->
+        <div class="image-section">
+            <h2>📦 Mahsulot Rasmlari</h2>
+            <div class="image-grid">
+                <div class="image-placeholder">
+                    <div class="placeholder-preview">🍾</div>
+                    <div class="placeholder-info">
+                        <h3>PET Preformlar</h3>
+                        <p>Turli o'lchamdagi PET preformlar to'plami</p>
+                        <p class="status-missing">Status: Kerak</p>
+                        <div class="file-path">images/products/pet-preforms.jpg</div>
+                    </div>
+                </div>
+
+                <div class="image-placeholder">
+                    <div class="placeholder-preview">🔵</div>
+                    <div class="placeholder-info">
+                        <h3>PP Qopqoqlar</h3>
+                        <p>Turli rangdagi PP qopqoqlar</p>
+                        <p class="status-missing">Status: Kerak</p>
+                        <div class="file-path">images/products/pp-caps.jpg</div>
+                    </div>
+                </div>
+
+                <div class="image-placeholder">
+                    <div class="placeholder-preview">🔗</div>
+                    <div class="placeholder-info">
+                        <h3>Tutqichlar</h3>
+                        <p>Plastik tutqichlar to'plami</p>
+                        <p class="status-missing">Status: Kerak</p>
+                        <div class="file-path">images/products/handles.jpg</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Gallery Section -->
+        <div class="image-section">
+            <h2>🏭 Galeriya Rasmlari</h2>
+            <div class="image-grid">
+                <div class="image-placeholder">
+                    <div class="placeholder-preview">🏢</div>
+                    <div class="placeholder-info">
+                        <h3>Zavod Binosi</h3>
+                        <p>Zavod tashqi ko'rinishi</p>
+                        <p class="status-missing">Status: Kerak</p>
+                        <div class="file-path">images/gallery/factory-exterior-1.jpg</div>
+                    </div>
+                </div>
+
+                <div class="image-placeholder">
+                    <div class="placeholder-preview">⚙️</div>
+                    <div class="placeholder-info">
+                        <h3>Ishlab Chiqarish</h3>
+                        <p>Ishlab chiqarish liniyasi</p>
+                        <p class="status-missing">Status: Kerak</p>
+                        <div class="file-path">images/gallery/production-line-1.jpg</div>
+                    </div>
+                </div>
+
+                <div class="image-placeholder">
+                    <div class="placeholder-preview">🔧</div>
+                    <div class="placeholder-info">
+                        <h3>Injection Mashina</h3>
+                        <p>Injection molding uskunasi</p>
+                        <p class="status-missing">Status: Kerak</p>
+                        <div class="file-path">images/gallery/injection-machine-1.jpg</div>
+                    </div>
+                </div>
+
+                <div class="image-placeholder">
+                    <div class="placeholder-preview">📦</div>
+                    <div class="placeholder-info">
+                        <h3>Mahsulotlar Xilma-xilligi</h3>
+                        <p>Turli PET preformlar</p>
+                        <p class="status-missing">Status: Kerak</p>
+                        <div class="file-path">images/gallery/pet-preforms-variety.jpg</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Quality Section -->
+        <div class="image-section">
+            <h2>🔬 Sifat Nazorati Rasmlari</h2>
+            <div class="image-grid">
+                <div class="image-placeholder">
+                    <div class="placeholder-preview">🧪</div>
+                    <div class="placeholder-info">
+                        <h3>Laboratoriya</h3>
+                        <p>Sifat nazorati laboratoriyasi</p>
+                        <p class="status-missing">Status: Kerak</p>
+                        <div class="file-path">images/quality/lab-testing.jpg</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Search Keywords -->
+        <div class="image-section">
+            <h2>🔍 Qidiruv Kalit So'zlari</h2>
+            <div style="background: rgba(255,255,255,0.7); padding: 20px; border-radius: 8px;">
+                <p><strong>Google Images da qidirish uchun:</strong></p>
+                <ul>
+                    <li>"PET preform manufacturing"</li>
+                    <li>"injection molding machine"</li>
+                    <li>"plastic bottle preform"</li>
+                    <li>"PP caps production"</li>
+                    <li>"plastic factory production line"</li>
+                    <li>"quality control laboratory plastic"</li>
+                </ul>
+                <p style="margin-top: 20px;"><strong>Bepul rasm saytlari:</strong></p>
+                <ul>
+                    <li>Unsplash.com</li>
+                    <li>Pexels.com</li>
+                    <li>Pixabay.com</li>
+                </ul>
+            </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 40px; padding: 20px; background: rgba(30, 136, 229, 0.1); border-radius: 8px;">
+            <h3>✅ Rasmlar Qo'shilgandan Keyin</h3>
+            <p>Saytni brauzerda oching va barcha rasmlar to'g'ri ko'rinishini tekshiring</p>
+            <a href="index.html" class="btn btn-primary" style="margin-top: 15px; display: inline-block;">Saytga Qaytish</a>
+        </div>
+    </div>
+</body>
+</html>

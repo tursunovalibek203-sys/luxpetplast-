@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products Test - Equal Height</title>
+    <link rel="stylesheet" href="products-equal-height.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #f8fafc;
+            padding: 40px 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .test-info {
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            margin-bottom: 30px;
+            border-left: 4px solid #3b82f6;
+        }
+        
+        .test-info h1 {
+            color: #0a1628;
+            margin-bottom: 10px;
+        }
+        
+        .test-info p {
+            color: #64748b;
+            line-height: 1.6;
+        }
+        
+        .success {
+            color: #10b981;
+            font-weight: 600;
+        }
+        
+        .error {
+            color: #ef4444;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="test-info">
+            <h1>✅ Products Grid Test</h1>
+            <p>Bu test sahifada 3 ta card bir xil balandlikda bo'lishi kerak.</p>
+            <p class="success">Agar cardlar turli balandlikda bo'lsa - CSS ishlamayapti.</p>
+            <p class="error">Agar cardlar bir xil balandlikda bo'lsa - CSS to'g'ri ishlayapti!</p>
+        </div>
+
+        <div class="products-grid-equal">
+            <!-- Card 1: PET Preformalar -->
+            <div class="product-card-equal">
+                <div class="product-icon-equal" style="background: linear-gradient(135deg, #3b82f6, #2563eb);">
+                    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5">
+                        <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+                    </svg>
+                </div>
+                <h3 class="product-title-equal">PET Preformalar</h3>
+                <p class="product-desc-equal">
+                    Oziq-ovqat va ichimlik sanoati uchun yuqori sifatli PET preformalar. PCO 2925 va PCO 1881 standartlari.
+                </p>
+                <a href="#" class="product-link-equal" style="color: #3b82f6;">
+                    <span>Batafsil</span>
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                </a>
+            </div>
+            
+            <!-- Card 2: PP Qopqoqlar -->
+            <div class="product-card-equal">
+                <div class="product-icon-equal" style="background: linear-gradient(135deg, #10b981, #059669);">
+                    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5">
+                        <circle cx="12" cy="12" r="10"/>
+                        <path d="M12 6v6l4 2"/>
+                    </svg>
+                </div>
+                <h3 class="product-title-equal">PP Qopqoqlar</h3>
+                <p class="product-desc-equal">
+                    Yuqori sifatli polipropilen materialdan mustahkam qopqoqlar. Gazli va gazsiz ichimliklar uchun.
+                </p>
+                <a href="#" class="product-link-equal" style="color: #10b981;">
+                    <span>Batafsil</span>
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                </a>
+            </div>
+            
+            <!-- Card 3: Tutqichlar -->
+            <div class="product-card-equal">
+                <div class="product-icon-equal" style="background: linear-gradient(135deg, #f59e0b, #d97706);">
+                    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5">
+                        <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+                    </svg>
+                </div>
+                <h3 class="product-title-equal">Tutqichlar</h3>
+                <p class="product-desc-equal">
+                    Ergonomik dizayn va yuqori mustahkamlikka ega PP tutqichlar. Katta hajmli idishlar uchun.
+                </p>
+                <a href="#" class="product-link-equal" style="color: #f59e0b;">
+                    <span>Batafsil</span>
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+        
+        <div class="test-info" style="margin-top: 30px;">
+            <h2 style="margin-bottom: 10px;">Tekshirish:</h2>
+            <ol style="padding-left: 20px; color: #64748b;">
+                <li>Barcha 3 ta card bir xil balandlikda bo'lishi kerak</li>
+                <li>Har bir cardning pastki qismi bir xil chiziqda bo'lishi kerak</li>
+                <li>Hover qilganda cardlar yuqoriga ko'tarilishi kerak</li>
+                <li>Ekran o'lchamini o'zgartirganda responsive ishlashi kerak</li>
+            </ol>
+        </div>
+    </div>
+</body>
+</html>

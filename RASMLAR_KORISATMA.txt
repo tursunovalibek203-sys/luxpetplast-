@@ -1,0 +1,141 @@
+﻿═══════════════════════════════════════════════════════════════
+    LP PLAST - RASMLARNI QO'SHISH BO'YICHA TO'LIQ QADAMLAR
+═══════════════════════════════════════════════════════════════
+
+📌 MUHIM: Sayt uchun professional rasmlar kerak!
+
+═══════════════════════════════════════════════════════════════
+USUL 1: GOOGLE IMAGES DAN YUKLAB OLISH (TAVSIYA ETILADI)
+═══════════════════════════════════════════════════════════════
+
+1️⃣ GOOGLE IMAGES NI OCHING:
+   - Brauzerda google.com/images ga kiring
+   
+2️⃣ QIDIRUV KALIT SO'ZLARI:
+   ✓ "PET preform manufacturing"
+   ✓ "injection molding machine"
+   ✓ "plastic bottle preform"
+   ✓ "PP caps production"
+   ✓ "plastic factory production line"
+   
+3️⃣ RASMNI TANLASH:
+   - Yuqori sifatli (kamida 800x600 piksel)
+   - Professional ko'rinishdagi rasmlarni tanlang
+   - "Tools" > "Size" > "Large" filterni qo'llang
+   
+4️⃣ RASMNI SAQLASH:
+   - Rasmni oching
+   - O'ng tugma > "Save image as..."
+   - Quyidagi jadvaldan to'g'ri nom va papkani tanlang
+   - "Save" tugmasini bosing
+
+═══════════════════════════════════════════════════════════════
+USUL 2: BEPUL RASM SAYTLARIDAN (PROFESSIONAL)
+═══════════════════════════════════════════════════════════════
+
+🌐 TAVSIYA ETILADIGAN SAYTLAR:
+   • Unsplash.com - Yuqori sifatli bepul rasmlar
+   • Pexels.com - Professional foto va videolar
+   • Pixabay.com - Bepul rasmlar va vektorlar
+
+QIDIRUV SO'ZLARI:
+   - "factory"
+   - "manufacturing"
+   - "industrial production"
+   - "plastic bottles"
+   - "laboratory"
+
+═══════════════════════════════════════════════════════════════
+KERAKLI RASMLAR RO'YXATI
+═══════════════════════════════════════════════════════════════
+
+📦 MAHSULOT RASMLARI (images/products/):
+┌─────────────────────────────────────────────────────────────┐
+│ 1. pet-preforms.jpg      - Turli PET preformlar to'plami   │
+│ 2. pp-caps.jpg           - PP qopqoqlar                     │
+│ 3. handles.jpg           - Plastik tutqichlar               │
+└─────────────────────────────────────────────────────────────┘
+
+🏭 GALERIYA RASMLARI (images/gallery/):
+┌─────────────────────────────────────────────────────────────┐
+│ 1. factory-exterior-1.jpg    - Zavod binosi tashqi ko'rinish│
+│ 2. production-line-1.jpg     - Ishlab chiqarish liniyasi    │
+│ 3. injection-machine-1.jpg   - Injection molding mashina    │
+│ 4. pet-preforms-variety.jpg  - Turli xil PET preformlar     │
+└─────────────────────────────────────────────────────────────┘
+
+🔬 SIFAT NAZORATI (images/quality/):
+┌─────────────────────────────────────────────────────────────┐
+│ 1. lab-testing.jpg       - Laboratoriya va test uskunalari  │
+└─────────────────────────────────────────────────────────────┘
+
+═══════════════════════════════════════════════════════════════
+BATAFSIL QADAMLAR (MISOL)
+═══════════════════════════════════════════════════════════════
+
+MISOL: pet-preforms.jpg ni qo'shish
+
+1. Google Images ga kiring
+2. "PET preform manufacturing" deb qidiring
+3. Yoqqan rasmni tanlang (katta o'lchamli)
+4. Rasmni oching va o'ng tugma bosing
+5. "Save image as..." ni tanlang
+6. Saqlash joyini ko'rsating:
+   
+   TO'LIQ YO'L:
+   C:\Users\tilav\Desktop\lux pet plast\images\products\
+   
+7. Fayl nomini yozing: pet-preforms.jpg
+8. "Save" tugmasini bosing
+9. Keyingi rasm uchun takrorlang
+
+═══════════════════════════════════════════════════════════════
+RASM TALABLARI
+═══════════════════════════════════════════════════════════════
+
+✅ O'LCHAM: Kamida 800x600 piksel (kattaroq yaxshiroq)
+✅ FORMAT: JPG yoki PNG
+✅ SIFAT: Yuqori sifatli, aniq rasmlar
+✅ FAYL HAJMI: 500KB dan kam (tez yuklash uchun)
+✅ NOM: Faqat ingliz harflari, raqamlar, tire (-)
+
+❌ NOTO'G'RI: Rasm 1.jpg, махсулот.jpg, photo (1).jpg
+✅ TO'G'RI: pet-preforms.jpg, factory-exterior-1.jpg
+
+═══════════════════════════════════════════════════════════════
+VISUAL QADAMLAR UCHUN
+═══════════════════════════════════════════════════════════════
+
+🖼️ VISUAL QO'LLANMA:
+   Brauzerda oching: image-guide.html
+   
+   Bu sahifada:
+   • Barcha kerakli rasmlar ro'yxati
+   • Har bir rasm uchun aniq yo'l
+   • Qidiruv kalit so'zlari
+   • Visual ko'rsatmalar
+
+═══════════════════════════════════════════════════════════════
+TEKSHIRISH
+═══════════════════════════════════════════════════════════════
+
+Rasmlar qo'shilgandan keyin:
+
+1. Brauzerda index.html ni oching
+2. F5 bosib sahifani yangilang
+3. Rasmlar to'g'ri ko'rinishini tekshiring
+4. Agar rasm ko'rinmasa:
+   ✓ Fayl nomini tekshiring (kichik harflar)
+   ✓ Papka yo'lini tekshiring
+   ✓ Fayl formatini tekshiring (JPG/PNG)
+
+═══════════════════════════════════════════════════════════════
+YORDAM KERAKMI?
+═══════════════════════════════════════════════════════════════
+
+Agar rasmlar bilan muammo bo'lsa:
+1. image-guide.html ni oching
+2. Har bir rasm uchun aniq ko'rsatmalarni o'qing
+3. Fayl nomlari va yo'llarni diqqat bilan tekshiring
+
+MUVAFFAQIYATLAR! 🎉

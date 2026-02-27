@@ -1,0 +1,33 @@
+OPTIMIZED NAVIGATION TEMPLATE
+=============================
+
+Use this navigation structure across all HTML files (5 menu items only):
+
+<ul class="nav-menu">
+    <li><a href="index.html" class="nav-link">Bosh sahifa</a></li>
+    <li><a href="products.html" class="nav-link">Mahsulotlar</a></li>
+    <li><a href="quality.html" class="nav-link">Sifat</a></li>
+    <li><a href="gallery.html" class="nav-link">Galereya</a></li>
+    <li><a href="contact.html" class="nav-link">Kontaktlar</a></li>
+</ul>
+
+REMOVED ITEMS (to reduce clutter):
+- Biz haqimizda (About)
+- Hamkorlar (Clients)
+- Blog
+- Karyera (Career)
+- Narx so'rash (Quote)
+
+These pages still exist but are not in main navigation.
+Users can access them through footer links or internal links.
+
+LOGO SPECIFICATIONS:
+- Default height: 40px (width: auto)
+- Scrolled height: 35px
+- Brand name font-size: 1.25rem (reduced from 1.5rem)
+
+NAVIGATION SPACING:
+- Header padding: 0.75rem 0 (default), 0.5rem 0 (scrolled)
+- Nav link padding: 0.5rem 1rem
+- Nav link font-size: 0.875rem
+- Gap between links: 0.25rem

@@ -1,0 +1,234 @@
+═══════════════════════════════════════════════════════════════
+  LUX PET PLAST - PRODUCT IMAGES DOWNLOAD REFERENCE
+═══════════════════════════════════════════════════════════════
+
+📥 QUICK DOWNLOAD GUIDE
+Open: download-images.html in your browser for easy downloading
+
+═══════════════════════════════════════════════════════════════
+  REQUIRED IMAGES (Must Download - 3 files)
+═══════════════════════════════════════════════════════════════
+
+1️⃣  55MM PREFORM (19L BOTTLES)
+────────────────────────────────────────────────────────────────
+Filename: preform-55mm-19l.jpg
+Location: images/products/
+URL: https://image.made-in-china.com/365f3j00ouQlpfcBvZgr/55mm-Preform-5-Gallon-18-9L-20L-Mineral-Water-Bottle-Container-Blowing-Pet-Plastic-Preform-Price.webp
+
+Description: 55mm preform for 19L water bottles (670gr-700gr)
+Format: WEBP (convert to JPG)
+Size: ~750x750px
+
+
+2️⃣  48MM PREFORM VARIETY
+────────────────────────────────────────────────────────────────
+Filename: preform-48mm-variety.jpg
+Location: images/products/
+URL: https://iqrorwxhmkrnlm5p.ldycdn.com/cloud/lnBpnKjllqSRmjqpkqrqip/crop_1686018973070.png
+
+Description: Various 48mm preforms (72gr-250gr)
+Format: PNG (convert to JPG)
+Size: ~1079x607px
+
+
+3️⃣  COLORED BOTTLE CAPS
+────────────────────────────────────────────────────────────────
+Filename: caps-colored-variety.jpg
+Location: images/products/
+URL: https://s.alicdn.com/@sc04/kf/He7dac02543184d65b366a90426c689f4S/High-Quality-Wholesale-2925-3025-Bottle-Screw-Cap-Plastic-Caps-30mm-Custom-Color-Lid.jpg
+
+Description: Colored caps 29-30mm (multiple colors)
+Format: JPG
+Size: ~300x300px
+
+
+═══════════════════════════════════════════════════════════════
+  OPTIONAL IMAGES (For Future Use - 4 files)
+═══════════════════════════════════════════════════════════════
+
+4️⃣  PCO 28MM CARBONATED PREFORM
+────────────────────────────────────────────────────────────────
+Filename: preform-pco28-carbonated.jpg
+Location: images/products/
+URL: https://www.greatplast.com/wp-content/uploads/2018/04/PET-Carbonated-Beverage-Preform-PCO-28MM-2.jpg
+
+Description: PCO 28mm preform for carbonated beverages
+Format: JPG
+Size: ~458x344px
+
+
+5️⃣  PREFORM COLLECTION
+────────────────────────────────────────────────────────────────
+Filename: preform-collection.jpg
+Location: images/products/
+URL: https://ibs.com.gr/wp-content/uploads/2022/07/preforms-new.jpg
+
+Description: Multiple preform sizes displayed together
+Format: JPG
+Size: ~1000x1000px
+
+
+6️⃣  PROFESSIONAL PREFORMS
+────────────────────────────────────────────────────────────────
+Filename: preforms-professional.jpg
+Location: images/products/
+URL: https://www.alpla.com/sites/default/files/2018-03/preforms_header_dsc_5890_a0.jpg
+
+Description: Professional preform production showcase
+Format: JPG
+Size: ~2272x1607px
+
+
+7️⃣  ADDITIONAL PREFORM IMAGES (From User URLs)
+────────────────────────────────────────────────────────────────
+URL: https://jialin1993.en.made-in-china.com/product/fnERtHkuzgpU/China-38mm-48mm-55mm-Pet-Preform-Bottle-Preform-Bottle-Perform-Bottle-Preform.html
+URL: https://www.dial4trade.com/frystal-pet-pvt-ltd-2145396/pet-bottle-preform-pdid-9607937.htm
+URL: https://www.vtonplastic.com/pet-bottle-preform.html
+URL: https://www.petainer.com/pet-plastic-preforms
+
+
+═══════════════════════════════════════════════════════════════
+  DOWNLOAD METHODS
+═══════════════════════════════════════════════════════════════
+
+METHOD 1: Using Download Page (Recommended)
+───────────────────────────────────────────
+1. Open: download-images.html
+2. Right-click each image
+3. Select "Save image as..."
+4. Save to: images/products/
+5. Use suggested filename
+
+METHOD 2: Direct URL Download
+───────────────────────────────────────────
+1. Copy URL from above
+2. Paste in browser address bar
+3. Right-click image
+4. Save to: images/products/
+5. Rename to suggested filename
+
+METHOD 3: Command Line (Advanced)
+───────────────────────────────────────────
+# Create directory if needed
+mkdir -p images/products
+
+# Download using curl or wget
+curl -o images/products/preform-55mm-19l.jpg "URL_HERE"
+
+
+═══════════════════════════════════════════════════════════════
+  FOLDER STRUCTURE
+═══════════════════════════════════════════════════════════════
+
+project/
+├── index.html
+├── download-images.html
+├── RASMLAR-QOSHISH-GUIDE.md
+├── IMAGE-INTEGRATION-SUMMARY.md
+├── IMAGE-URLS-REFERENCE.txt (this file)
+└── images/
+    ├── products/
+    │   ├── pet-preforms.jpg (existing)
+    │   ├── pp-caps.jpg (existing)
+    │   ├── handles.jpg (existing)
+    │   ├── preform-55mm-19l.jpg ⬅️ NEW (required)
+    │   ├── preform-48mm-variety.jpg ⬅️ NEW (required)
+    │   ├── caps-colored-variety.jpg ⬅️ NEW (required)
+    │   ├── preform-pco28-carbonated.jpg (optional)
+    │   ├── preform-collection.jpg (optional)
+    │   └── preforms-professional.jpg (optional)
+    └── gallery/
+        ├── factory-exterior-1.jpg
+        ├── production-line-1.jpg
+        ├── injection-machine-1.jpg
+        └── pet-preforms-variety.jpg
+
+
+═══════════════════════════════════════════════════════════════
+  VERIFICATION CHECKLIST
+═══════════════════════════════════════════════════════════════
+
+After downloading images:
+
+□ All 3 required images downloaded
+□ Images saved to images/products/ folder
+□ Filenames match exactly (case-sensitive)
+□ File formats are correct (JPG/PNG)
+□ Open index.html in browser
+□ Scroll to Products section
+□ Verify all 3 showcases display images
+□ Test on mobile device
+□ Check image quality
+□ Verify hover effects work
+
+
+═══════════════════════════════════════════════════════════════
+  TROUBLESHOOTING
+═══════════════════════════════════════════════════════════════
+
+Images not loading?
+→ Check filename spelling (case-sensitive)
+→ Verify folder path: images/products/
+→ Clear browser cache (Ctrl+F5)
+→ Check file format (JPG, PNG, WEBP)
+
+Can't download images?
+→ Try different browser
+→ Check internet connection
+→ Use download-images.html page
+→ Try direct URL in browser
+
+Layout broken?
+→ Verify all CSS files loaded
+→ Check browser console for errors
+→ Test in different browser
+→ Validate HTML structure
+
+
+═══════════════════════════════════════════════════════════════
+  QUICK STATS
+═══════════════════════════════════════════════════════════════
+
+Total Images Added: 3 showcases
+Required Downloads: 3 images
+Optional Downloads: 4 images
+Total File Size: ~2-3 MB (estimated)
+Formats Supported: JPG, PNG, WEBP
+Lazy Loading: Enabled
+Responsive: Yes
+Mobile Optimized: Yes
+
+
+═══════════════════════════════════════════════════════════════
+  SUPPORT FILES
+═══════════════════════════════════════════════════════════════
+
+📄 download-images.html - Interactive download page
+📄 RASMLAR-QOSHISH-GUIDE.md - Uzbek language guide
+📄 IMAGE-INTEGRATION-SUMMARY.md - Technical documentation
+📄 IMAGE-URLS-REFERENCE.txt - This quick reference
+
+
+═══════════════════════════════════════════════════════════════
+  NEXT STEPS
+═══════════════════════════════════════════════════════════════
+
+1. Open download-images.html
+2. Download 3 required images
+3. Save to images/products/
+4. Open index.html
+5. Test and verify
+6. Enjoy your enhanced website! 🎉
+
+
+═══════════════════════════════════════════════════════════════
+  END OF REFERENCE
+═══════════════════════════════════════════════════════════════
+
+Last Updated: Current Session
+Status: Ready for Download
+Priority: High (3 required images)
+
+For detailed instructions, see:
+- RASMLAR-QOSHISH-GUIDE.md (Uzbek)
+- IMAGE-INTEGRATION-SUMMARY.md (English)

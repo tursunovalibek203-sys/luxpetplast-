@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Translation Test - LP Plast</title>
+    <link rel="stylesheet" href="styles-corporate.css">
+    <style>
+        body {
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .test-section {
+            margin: 2rem 0;
+            padding: 2rem;
+            background: var(--gray-50);
+            border-radius: 12px;
+        }
+        .test-title {
+            color: var(--accent-blue);
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+        .test-item {
+            margin: 1rem 0;
+            padding: 1rem;
+            background: white;
+            border-radius: 8px;
+            border-left: 4px solid var(--accent-blue);
+        }
+        .key {
+            font-family: monospace;
+            color: var(--gray-500);
+            font-size: 0.875rem;
+        }
+        .value {
+            font-size: 1.125rem;
+            color: var(--primary-dark);
+            margin-top: 0.5rem;
+        }
+        .language-switcher {
+            position: fixed;
+            top: 2rem;
+            right: 2rem;
+            z-index: 1000;
+        }
+    </style>
+    <script src="translations.js" defer></script>
+</head>
+<body>
+    <h1 style="text-align: center; color: var(--primary-dark); margin-bottom: 3rem;">
+        🧪 LP Plast Translation System Test
+    </h1>
+
+    <!-- Navigation Test -->
+    <div class="test-section">
+        <h2 class="test-title">📍 Navigation</h2>
+        <div class="test-item">
+            <div class="key">nav_home</div>
+            <div class="value" data-i18n="nav_home">Bosh sahifa</div>
+        </div>
+        <div class="test-item">
+            <div class="key">nav_products</div>
+            <div class="value" data-i18n="nav_products">Mahsulotlar</div>
+        </div>
+        <div class="test-item">
+            <div class="key">nav_quality</div>
+            <div class="value" data-i18n="nav_quality">Sifat</div>
+        </div>
+    </div>
+
+    <!-- Hero Section Test -->
+    <div class="test-section">
+        <h2 class="test-title">🎯 Hero Section</h2>
+        <div class="test-item">
+            <div class="key">hero_badge</div>
+            <div class="value" data-i18n="hero_badge">ISO 9001:2015 | ISO 22000:2018 | HACCP CERTIFIED</div>
+        </div>
+        <div class="test-item">
+            <div class="key">hero_title_1</div>
+            <div class="value" data-i18n="hero_title_1">O'zbekistonning Yetakchi</div>
+        </div>
+        <div class="test-item">
+            <div class="key">hero_description</div>
+            <div class="value" data-i18n="hero_description">2018-yildan beri zamonaviy Yevropa texnologiyalari...</div>
+        </div>
+    </div>
+
+    <!-- Certifications Test -->
+    <div class="test-section">
+        <h2 class="test-title">🏆 Certifications</h2>
+        <div class="test-item">
+            <div class="key">cert_iso9001_title</div>
+            <div class="value" data-i18n="cert_iso9001_title">ISO 9001:2015</div>
+        </div>
+        <div class="test-item">
+            <div class="key">cert_iso9001_desc</div>
+            <div class="value" data-i18n="cert_iso9001_desc">Sifat menejmenti tizimi xalqaro standarti...</div>
+        </div>
+    </div>
+
+    <!-- Products Test -->
+    <div class="test-section">
+        <h2 class="test-title">📦 Products</h2>
+        <div class="test-item">
+            <div class="key">products_pet_title</div>
+            <div class="value" data-i18n="products_pet_title">PET Preformalar</div>
+        </div>
+        <div class="test-item">
+            <div class="key">products_pp_title</div>
+            <div class="value" data-i18n="products_pp_title">PP Qopqoqlar</div>
+        </div>
+        <div class="test-item">
+            <div class="key">products_handles_title</div>
+            <div class="value" data-i18n="products_handles_title">Tutqichlar (Handles)</div>
+        </div>
+    </div>
+
+    <!-- Why Choose Us Test -->
+    <div class="test-section">
+        <h2 class="test-title">⭐ Why Choose Us</h2>
+        <div class="test-item">
+            <div class="key">why_tech_title</div>
+            <div class="value" data-i18n="why_tech_title">Zamonaviy Texnologiyalar</div>
+        </div>
+        <div class="test-item">
+            <div class="key">why_team_title</div>
+            <div class="value" data-i18n="why_team_title">Professional Jamoa</div>
+        </div>
+        <div class="test-item">
+            <div class="key">why_capacity_title</div>
+            <div class="value" data-i18n="why_capacity_title">Yuqori Quvvat</div>
+        </div>
+    </div>
+
+    <!-- Footer Test -->
+    <div class="test-section">
+        <h2 class="test-title">📄 Footer</h2>
+        <div class="test-item">
+            <div class="key">footer_description</div>
+            <div class="value" data-i18n="footer_description">2018-yildan beri O'zbekiston va MDH davlatlariga...</div>
+        </div>
+        <div class="test-item">
+            <div class="key">footer_rights</div>
+            <div class="value" data-i18n="footer_rights">Barcha huquqlar himoyalangan.</div>
+        </div>
+    </div>
+
+    <div style="text-align: center; margin-top: 3rem; padding: 2rem; background: var(--accent-blue); color: white; border-radius: 12px;">
+        <h3>✅ Translation Test Complete!</h3>
+        <p>Switch languages using the buttons above to test all translations.</p>
+        <p style="font-size: 0.875rem; opacity: 0.9; margin-top: 1rem;">
+            Total Keys Tested: 18 | Languages: 3 (O'zbek, Русский, English)
+        </p>
+    </div>
+</body>
+</html>

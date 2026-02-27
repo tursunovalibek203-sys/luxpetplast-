@@ -1,0 +1,15 @@
+<svg width="100" height="100" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
+  <!-- Top Red Triangle -->
+  <path d="M512 50 L850 300 L174 300 Z" fill="#E53935"/>
+  
+  <!-- Left Blue Shape with L -->
+  <path d="M50 300 L450 300 L450 700 L350 700 L350 550 L250 550 L250 700 L50 700 Z" fill="#1E88E5"/>
+  <rect x="250" y="400" width="100" height="50" fill="white"/>
+  
+  <!-- Right Red Shape with P -->
+  <path d="M574 300 L974 300 L974 700 L574 700 L574 550 L774 550 L774 450 L574 450 Z" fill="#E53935"/>
+  <path d="M674 350 L874 350 L874 500 L674 500 Z" fill="white"/>
+  
+  <!-- Bottom Red Triangle -->
+  <path d="M512 974 L850 724 L174 724 Z" fill="#E53935"/>
+</svg>

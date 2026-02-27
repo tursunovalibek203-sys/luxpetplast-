@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LP Plast - Samplast Style Demo</title>
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles-samplast-inspired.css">
+    
+    <style>
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        
+        section {
+            padding: 5rem 0;
+        }
+        
+        .section-title {
+            font-size: clamp(2rem, 5vw, 3rem);
+            font-weight: 800;
+            text-align: center;
+            margin-bottom: 1rem;
+            color: var(--text-dark);
+            line-height: 1.2;
+        }
+        
+        .section-subtitle {
+            text-align: center;
+            font-size: 1.125rem;
+            color: var(--text-light);
+            max-width: 700px;
+            margin: 0 auto 3rem;
+            line-height: 1.7;
+        }
+        
+        .card-icon {
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, #3498db, #2980b9);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 4px 15px rgba(52, 152, 219, 0.2);
+        }
+        
+        .card-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: var(--text-dark);
+            line-height: 1.3;
+        }
+        
+        .card-text {
+            color: var(--text-light);
+            line-height: 1.7;
+            font-size: 1rem;
+        }
+        
+        .feature-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .feature-list li {
+            padding: 0.875rem 0;
+            border-bottom: 1px solid #e9ecef;
+            color: var(--text-light);
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            font-size: 1rem;
+        }
+        
+        .feature-list li:last-child {
+            border-bottom: none;
+        }
+        
+        .feature-list li::before {
+            content: '✓';
+            color: #3498db;
+            font-weight: bold;
+            font-size: 1.25rem;
+        }
+        
+        .tab-title {
+            font-size: 1.75rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: var(--text-dark);
+        }
+        
+        .tab-description {
+            color: var(--text-light);
+            margin-bottom: 1.5rem;
+            line-height: 1.7;
+            font-size: 1.0625rem;
+        }
+    </style>
+</head>
+<body>
+    
+    <!-- Preloader -->
+    <div class="preloader" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: #1a1f2e; display: flex; align-items: center; justify-content: center; z-index: 99999;">
+        <div style="text-align: center; color: white;">
+            <div style="width: 60px; height: 60px; border: 4px solid rgba(255,255,255,0.1); border-top-color: #3498db; border-radius: 50%; animation: spin 1s linear infinite; margin: 0 auto 1rem;"></div>
+            <p style="font-size: 1rem; font-weight: 600; letter-spacing: 0.2em;">LOADING</p>
+        </div>
+    </div>
+    
+    <style>
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+    </style>
+    
+    <!-- Hero Section - Samplast Style -->
+    <section class="hero-samplast">
+        <div class="container">
+            <div class="reveal-samplast" style="text-align: center; color: white; max-width: 900px; margin: 0 auto;">
+                <div style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.5rem 1.5rem; background: rgba(255,255,255,0.1); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.2); border-radius: 50px; margin-bottom: 2rem; font-size: 0.875rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em;">
+                    <span>🏭</span>
+                    <span>2018-yildan beri</span>
+                </div>
+                
+                <h1 style="font-size: clamp(2.5rem, 7vw, 4.5rem); font-weight: 900; margin-bottom: 1.5rem; line-height: 1.15; letter-spacing: -0.02em;">
+                    Yuqori Sifatli PET va PP<br>Mahsulotlari Ishlab Chiqaruvchisi
+                </h1>
+                
+                <p style="font-size: 1.25rem; line-height: 1.7; margin-bottom: 3rem; opacity: 0.95; max-width: 750px; margin-left: auto; margin-right: auto;">
+                    Zamonaviy Yevropa texnologiyalari bilan ishlab chiqarilgan PET preformalar va PP qopqoqlar. ISO sertifikatlangan sifat nazorati.
+                </p>
+                
+                <div style="display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap;">
+                    <button class="btn-samplast btn-samplast-primary" data-modal-samplast="productModal">
+                        Mahsulotlar
+                        <span>→</span>
+                    </button>
+                    <a href="#contact" class="btn-samplast btn-samplast-secondary">
+                        Bog'lanish
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Stats Section - Samplast Style -->
+    <section class="stats-samplast">
+        <div class="container">
+            <div class="stats-grid-samplast">
+                <div class="stat-item-samplast reveal-samplast delay-100">
+                    <div class="stat-number-samplast" data-count="6" data-suffix="+">0+</div>
+                    <div class="stat-label-samplast">Yillik Tajriba</div>
+                </div>
+                
+                <div class="stat-item-samplast reveal-samplast delay-200">
+                    <div class="stat-number-samplast" data-count="200" data-suffix="+">0+</div>
+                    <div class="stat-label-samplast">Mijozlar</div>
+                </div>
+                
+                <div class="stat-item-samplast reveal-samplast delay-300">
+                    <div class="stat-number-samplast">200K+</div>
+                    <div class="stat-label-samplast">Kunlik Ishlab Chiqarish</div>
+                </div>
+                
+                <div class="stat-item-samplast reveal-samplast delay-400">
+                    <div class="stat-number-samplast" data-count="30" data-suffix="+">0+</div>
+                    <div class="stat-label-samplast">Mahsulot Turlari</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Cards Section - Samplast Style -->
+    <section class="bg-pattern-dots">
+        <div class="container">
+            <h2 class="section-title reveal-samplast">Bizning Xizmatlarimiz</h2>
+            <p class="section-subtitle reveal-samplast">Professional yondashuv va zamonaviy texnologiyalar bilan yuqori sifatli mahsulotlar ishlab chiqaramiz</p>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem;">
+                <div class="card-samplast reveal-samplast-left delay-100">
+                    <div class="card-icon">🏭</div>
+                    <h3 class="card-title">Zamonaviy Texnologiya</h3>
+                    <p class="card-text">Yevropa standartlaridagi uskunalar va to'liq avtomatlashtirilgan ishlab chiqarish jarayoni bilan yuqori sifat kafolatini ta'minlaymiz.</p>
+                </div>
+                
+                <div class="card-samplast reveal-samplast delay-200">
+                    <div class="card-icon">✓</div>
+                    <h3 class="card-title">ISO Sertifikatlangan</h3>
+                    <p class="card-text">ISO 9001:2015 va ISO 22000 xalqaro sertifikatlari bilan tasdiqlangan sifat menejmenti tizimi asosida ishlaymiz.</p>
+                </div>
+                
+                <div class="card-samplast reveal-samplast-right delay-300">
+                    <div class="card-icon">🌍</div>
+                    <h3 class="card-title">Eksport Qobiliyati</h3>
+                    <p class="card-text">O'zbekiston va MDH davlatlariga yuqori sifatli mahsulotlarni o'z vaqtida yetkazib berish xizmatini taqdim etamiz.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Tabs Section - Samplast Style -->
+    <section class="bg-pattern-grid">
+        <div class="container">
+            <h2 class="section-title reveal-samplast">Mahsulotlar Katalogi</h2>
+            <p class="section-subtitle reveal-samplast">Turli xil ehtiyojlar uchun keng assortimentdagi yuqori sifatli mahsulotlar</p>
+            
+            <div class="tabs-samplast reveal-samplast">
+                <div class="tabs-nav-samplast">
+                    <button class="tab-button-samplast active" data-tab="tab1">PET Preformalar</button>
+                    <button class="tab-button-samplast" data-tab="tab2">PP Qopqoqlar</button>
+                    <button class="tab-button-samplast" data-tab="tab3">Tutqichlar</button>
+                </div>
+                
+                <div class="tab-content-samplast">
+                    <div id="tab1" class="tab-pane-samplast active">
+                        <h3 class="tab-title">PET Preformalar</h3>
+                        <p class="tab-description">Turli hajm va rangdagi yuqori sifatli PET preformalar. PCO 2925 va PCO 1881 seriyalari mavjud. Virgin PET materialdan ishlab chiqarilgan.</p>
+                        <ul class="feature-list">
+                            <li>12g - 30g og'irlik oralig'ida turli xil o'lchamlar</li>
+                            <li>100% Virgin PET material - yuqori sifat kafolati</li>
+                            <li>Turli ranglar va shaffof variantlar mavjud</li>
+                            <li>ISO 9001 va ISO 22000 sertifikatlangan ishlab chiqarish</li>
+                        </ul>
+                    </div>
+                    
+                    <div id="tab2" class="tab-pane-samplast">
+                        <h3 class="tab-title">PP Qopqoqlar</h3>
+                        <p class="tab-description">Zamonaviy dizayn va mustahkam PP qopqoqlar. Turli o'lcham va ranglar. Gazli va gazsiz ichimliklar uchun maxsus variantlar.</p>
+                        <ul class="feature-list">
+                            <li>28mm - 48mm diametr oralig'ida turli o'lchamlar</li>
+                            <li>Food Grade PP material - oziq-ovqat xavfsizligi</li>
+                            <li>Rangli va shaffof variantlar - dizayn ehtiyojlari uchun</li>
+                            <li>Gazli va gazsiz ichimliklar uchun maxsus konstruksiya</li>
+                        </ul>
+                    </div>
+                    
+                    <div id="tab3" class="tab-pane-samplast">
+                        <h3 class="tab-title">Tutqichlar</h3>
+                        <p class="tab-description">Ergonomik va chidamli tutqichlar. Katta hajmli idishlar uchun maxsus ishlab chiqilgan. Yuqori mustahkamlik va qulaylik.</p>
+                        <ul class="feature-list">
+                            <li>28mm - 48mm o'lchamlarda turli variantlar</li>
+                            <li>Ergonomik dizayn - foydalanish qulayligi</li>
+                            <li>Yuqori mustahkamlik - uzoq muddatli foydalanish</li>
+                            <li>Turli ranglar - brendingiz uchun moslashuvchan</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Accordion Section - Samplast Style -->
+    <section>
+        <div class="container">
+            <h2 class="section-title reveal-samplast">Ko'p So'raladigan Savollar</h2>
+            <p class="section-subtitle reveal-samplast">Mijozlarimiz tomonidan eng ko'p beriladigan savollarga javoblar</p>
+            
+            <div style="max-width: 900px; margin: 0 auto;">
+                <div class="accordion-samplast reveal-samplast delay-100">
+                    <div class="accordion-header-samplast">
+                        <h3 class="accordion-title-samplast">Mahsulotlaringiz qanday sertifikatlarga ega?</h3>
+                        <div class="accordion-icon-samplast">▼</div>
+                    </div>
+                    <div class="accordion-body-samplast">
+                        <p style="color: var(--text-light); line-height: 1.7;">Bizning mahsulotlarimiz ISO 9001:2015 (sifat menejmenti tizimi) va ISO 22000 (oziq-ovqat xavfsizligi menejmenti) xalqaro standartlari bo'yicha sertifikatlangan. Barcha mahsulotlar SGS va Bureau Veritas xalqaro kompaniyalari tomonidan muntazam tekshiriladi va tasdiqlanadi.</p>
+                    </div>
+                </div>
+                
+                <div class="accordion-samplast reveal-samplast delay-200">
+                    <div class="accordion-header-samplast">
+                        <h3 class="accordion-title-samplast">Minimal buyurtma hajmi qancha?</h3>
+                        <div class="accordion-icon-samplast">▼</div>
+                    </div>
+                    <div class="accordion-body-samplast">
+                        <p style="color: var(--text-light); line-height: 1.7;">Minimal buyurtma hajmi mahsulot turiga va spetsifikatsiyasiga qarab o'zgaradi. PET preformalar uchun minimal buyurtma odatda 50,000 dona, PP qopqoqlar uchun 100,000 dona. Aniq ma'lumot va maxsus shartlar uchun bizning savdo bo'limi bilan bog'laning.</p>
+                    </div>
+                </div>
+                
+                <div class="accordion-samplast reveal-samplast delay-300">
+                    <div class="accordion-header-samplast">
+                        <h3 class="accordion-title-samplast">Yetkazib berish qancha vaqt oladi?</h3>
+                        <div class="accordion-icon-samplast">▼</div>
+                    </div>
+                    <div class="accordion-body-samplast">
+                        <p style="color: var(--text-light); line-height: 1.7;">Toshkent shahri bo'ylab 24-48 soat ichida, O'zbekistonning boshqa viloyatlariga 3-5 ish kuni ichida yetkazib beramiz. MDH davlatlariga yetkazib berish muddati masofa va logistika sharoitlariga qarab alohida kelishiladi. Tezkor yetkazib berish xizmati ham mavjud.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Gallery Section - Samplast Style -->
+    <section class="bg-pattern-dots">
+        <div class="container">
+            <h2 class="section-title reveal-samplast">Zavod Galereyasi</h2>
+            <p class="section-subtitle reveal-samplast">Zamonaviy ishlab chiqarish majmuamiz va yuqori sifatli mahsulotlarimiz bilan tanishing</p>
+            
+            <div class="gallery-samplast">
+                <div class="gallery-item-samplast reveal-samplast delay-100">
+                    <img src="images/gallery/factory-exterior-1.jpg" alt="Zavod binosi">
+                    <div class="gallery-overlay-samplast">
+                        <h3>Zamonaviy Zavod</h3>
+                    </div>
+                </div>
+                
+                <div class="gallery-item-samplast reveal-samplast delay-200">
+                    <img src="images/gallery/production-line-1.jpg" alt="Ishlab chiqarish liniyasi">
+                    <div class="gallery-overlay-samplast">
+                        <h3>Ishlab Chiqarish</h3>
+                    </div>
+                </div>
+                
+                <div class="gallery-item-samplast reveal-samplast delay-300">
+                    <img src="images/gallery/injection-machine-1.jpg" alt="Uskunalar">
+                    <div class="gallery-overlay-samplast">
+                        <h3>Yevropa Uskunalari</h3>
+                    </div>
+                </div>
+                
+                <div class="gallery-item-samplast reveal-samplast delay-400">
+                    <img src="images/gallery/pet-preforms-variety.jpg" alt="Mahsulotlar">
+                    <div class="gallery-overlay-samplast">
+                        <h3>30+ Mahsulot Turi</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Modal Example - Samplast Style -->
+    <div id="productModal" class="modal-samplast">
+        <div class="modal-samplast-backdrop"></div>
+        <div class="modal-samplast-content">
+            <div class="modal-samplast-header">
+                <h2 class="modal-samplast-title">Mahsulot Tafsilotlari</h2>
+                <button class="modal-samplast-close">×</button>
+            </div>
+            <div class="modal-samplast-body">
+                <p style="color: var(--text-light); margin-bottom: 2rem; font-size: 1.125rem;">
+                    Bu Samplast uslubidagi professional modal oyna. Yumshoq scale-up animatsiyasi va backdrop blur effekti bilan.
+                </p>
+                
+                <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; margin-bottom: 2rem;">
+                    <div style="padding: 1.5rem; background: #f8f9fa; border-radius: 8px;">
+                        <strong style="display: block; margin-bottom: 0.5rem; color: var(--text-dark);">Og'irligi:</strong>
+                        <span style="color: var(--text-light);">12g - 30g</span>
+                    </div>
+                    <div style="padding: 1.5rem; background: #f8f9fa; border-radius: 8px;">
+                        <strong style="display: block; margin-bottom: 0.5rem; color: var(--text-dark);">Material:</strong>
+                        <span style="color: var(--text-light);">Virgin PET</span>
+                    </div>
+                    <div style="padding: 1.5rem; background: #f8f9fa; border-radius: 8px;">
+                        <strong style="display: block; margin-bottom: 0.5rem; color: var(--text-dark);">Bo'yin:</strong>
+                        <span style="color: var(--text-light);">PCO 2925/1881</span>
+                    </div>
+                    <div style="padding: 1.5rem; background: #f8f9fa; border-radius: 8px;">
+                        <strong style="display: block; margin-bottom: 0.5rem; color: var(--text-dark);">Ranglar:</strong>
+                        <span style="color: var(--text-light);">Buyurtmaga binoan</span>
+                    </div>
+                </div>
+                
+                <div style="display: flex; gap: 1rem;">
+                    <a href="products.html" class="btn-samplast btn-samplast-primary" style="flex: 1; justify-content: center;">
+                        Barcha Mahsulotlar →
+                    </a>
+                    <a href="quote.html" class="btn-samplast btn-samplast-secondary" style="flex: 1; justify-content: center;">
+                        Narx So'rash
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Scripts -->
+    <script src="animations-samplast.js"></script>
+    
+</body>
+</html>

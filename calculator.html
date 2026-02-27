@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Narx Kalkulyatori - PET Preform</title>
+    <meta name="description" content="PET Preform mahsulotlari uchun online narx kalkulyatori. Tezkor narx hisoblash va buyurtma berish.">
+    <link rel="stylesheet" href="styles-new.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav">
+            <div class="container">
+                <div class="nav-brand">
+                    <img src="images/logo.png" alt="PET Preform Logo" class="logo">
+                    <span class="brand-name">PET Preform</span>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link">Bosh sahifa</a></li>
+                    <li><a href="about.html" class="nav-link">Biz haqimizda</a></li>
+                    <li><a href="products.html" class="nav-link">Mahsulotlar</a></li>
+                    <li><a href="gallery.html" class="nav-link">Galeriya</a></li>
+                    <li><a href="clients.html" class="nav-link">Hamkorlar</a></li>
+                    <li><a href="calculator.html" class="nav-link active">Narx Kalkulyatori</a></li>
+                    <li><a href="quote.html" class="nav-link">Narx so'rash</a></li>
+                    <li><a href="contact.html" class="nav-link">Kontaktlar</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Online Narx Kalkulyatori</h1>
+            <p>Tezkor narx hisoblash va buyurtma berish</p>
+        </div>
+    </section>
+
+    <!-- Calculator Section -->
+    <section class="calculator-section">
+        <div class="container">
+            <div class="calculator-wrapper">
+                <div class="calculator-form">
+                    <h2>Narxni Hisoblang</h2>
+                    <p class="calculator-description">Mahsulot turini va miqdorini tanlang, biz sizga taxminiy narxni ko'rsatamiz</p>
+                    
+                    <form id="priceCalculator">
+                        <!-- Product Category -->
+                        <div class="form-group">
+                            <label for="productCategory">Mahsulot Kategoriyasi *</label>
+                            <select id="productCategory" required>
+                                <option value="">Kategoriyani tanlang</option>
+                                <option value="pet-preforms">PET Preformalar</option>
+                                <option value="pp-caps">PP Qopqoqlar</option>
+                                <option value="handles">Tutqichlar</option>
+                            </select>
+                        </div>
+
+                        <!-- Product Type -->
+                        <div class="form-group" id="productTypeGroup" style="display: none;">
+                            <label for="productType">Mahsulot Turi *</label>
+                            <select id="productType" required>
+                                <option value="">Mahsulotni tanlang</option>
+                            </select>
+                        </div>
+
+                        <!-- Quantity -->
+                        <div class="form-group">
+                            <label for="quantity">Miqdor (dona) *</label>
+                            <input type="number" id="quantity" min="1000" step="1000" placeholder="Masalan: 10000" required>
+                            <small class="form-hint">Minimal buyurtma: <span id="minOrder">-</span> dona</small>
+                        </div>
+
+                        <!-- Color -->
+                        <div class="form-group">
+                            <label for="color">Rang</label>
+                            <select id="color">
+                                <option value="clear">Shaffof</option>
+                                <option value="blue">Ko'k</option>
+                                <option value="green">Yashil</option>
+                                <option value="custom">Maxsus rang (+10%)</option>
+                            </select>
+                        </div>
+
+                        <!-- Delivery -->
+                        <div class="form-group">
+                            <label for="delivery">Yetkazib Berish</label>
+                            <select id="delivery">
+                                <option value="pickup">O'zim olib ketaman (0 so'm)</option>
+                                <option value="tashkent">Toshkent shahri (100,000 so'm)</option>
+                                <option value="regions">Viloyatlar (200,000-500,000 so'm)</option>
+                                <option value="cis">MDH davlatlari (kelishiladi)</option>
+                            </select>
+                        </div>
+
+                        <!-- Discount Code -->
+                        <div class="form-group">
+                            <label for="discountCode">Chegirma Kodi (ixtiyoriy)</label>
+                            <input type="text" id="discountCode" placeholder="Chegirma kodini kiriting">
+                        </div>
+
+                        <button type="button" class="btn btn-primary btn-large" id="calculateBtn">Narxni Hisoblash</button>
+                    </form>
+                </div>
+
+                <div class="calculator-result">
+                    <div class="result-card">
+                        <h3>Narx Hisoblash Natijasi</h3>
+                        
+                        <div class="result-details" id="resultDetails" style="display: none;">
+                            <div class="result-item">
+                                <span class="result-label">Mahsulot:</span>
+                                <span class="result-value" id="resultProduct">-</span>
+                            </div>
+                            
+                            <div class="result-item">
+                                <span class="result-label">Miqdor:</span>
+                                <span class="result-value" id="resultQuantity">-</span>
+                            </div>
+                            
+                            <div class="result-item">
+                                <span class="result-label">Birlik narxi:</span>
+                                <span class="result-value" id="resultUnitPrice">-</span>
+                            </div>
+                            
+                            <div class="result-item">
+                                <span class="result-label">Jami summa:</span>
+                                <span class="result-value" id="resultSubtotal">-</span>
+                            </div>
+                            
+                            <div class="result-item" id="colorPriceRow" style="display: none;">
+                                <span class="result-label">Rang qo'shimchasi:</span>
+                                <span class="result-value" id="resultColorPrice">-</span>
+                            </div>
+                            
+                            <div class="result-item" id="deliveryPriceRow" style="display: none;">
+                                <span class="result-label">Yetkazib berish:</span>
+                                <span class="result-value" id="resultDeliveryPrice">-</span>
+                            </div>
+                            
+                            <div class="result-item" id="discountRow" style="display: none;">
+                                <span class="result-label">Chegirma:</span>
+                                <span class="result-value discount" id="resultDiscount">-</span>
+                            </div>
+                            
+                            <div class="result-divider"></div>
+                            
+                            <div class="result-item total">
+                                <span class="result-label">Umumiy Narx:</span>
+                                <span class="result-value" id="resultTotal">-</span>
+                            </div>
+                            
+                            <div class="result-note">
+                                <p>⚠️ Bu taxminiy narx. Aniq narx uchun biz bilan bog'laning.</p>
+                            </div>
+                            
+                            <div class="result-actions">
+                                <a href="quote.html" class="btn btn-primary">Rasmiy Narx So'rash</a>
+                                <button type="button" class="btn btn-outline" id="printBtn">Chop Etish</button>
+                            </div>
+                        </div>
+                        
+                        <div class="result-placeholder" id="resultPlaceholder">
+                            <div class="placeholder-icon">📊</div>
+                            <p>Narxni hisoblash uchun ma'lumotlarni kiriting</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Price Info -->
+                    <div class="price-info">
+                        <h4>Narx Haqida Ma'lumot</h4>
+                        <ul>
+                            <li>Narxlar USD da ko'rsatiladi</li>
+                            <li>Katta hajmli buyurtmalar uchun maxsus chegirmalar</li>
+                            <li>Doimiy mijozlar uchun 5-10% chegirma</li>
+                            <li>Narxlar o'zgarishi mumkin</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Price Table -->
+    <section class="price-table-section">
+        <div class="container">
+            <h2>Narxlar Jadvali</h2>
+            <p class="section-description">Asosiy mahsulotlarimizning taxminiy narxlari</p>
+            
+            <div class="price-tables">
+                <div class="price-table">
+                    <h3>PET Preformalar</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Mahsulot</th>
+                                <th>Og'irligi</th>
+                                <th>Min. Buyurtma</th>
+                                <th>Narx (USD)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>PCO 2925 Standard</td>
+                                <td>12g</td>
+                                <td>10,000</td>
+                                <td>$0.08-0.10</td>
+                            </tr>
+                            <tr>
+                                <td>PCO 2925 Standard</td>
+                                <td>16g</td>
+                                <td>10,000</td>
+                                <td>$0.10-0.12</td>
+                            </tr>
+                            <tr>
+                                <td>PCO 1881 Standard</td>
+                                <td>15g</td>
+                                <td>10,000</td>
+                                <td>$0.09-0.11</td>
+                            </tr>
+                            <tr>
+                                <td>Large Preform</td>
+                                <td>52g</td>
+                                <td>5,000</td>
+                                <td>$0.25-0.30</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="price-table">
+                    <h3>PP Qopqoqlar</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Mahsulot</th>
+                                <th>O'lcham</th>
+                                <th>Min. Buyurtma</th>
+                                <th>Narx (USD)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>PP Qopqoq</td>
+                                <td>28mm</td>
+                                <td>50,000</td>
+                                <td>$0.02-0.03</td>
+                            </tr>
+                            <tr>
+                                <td>PP Qopqoq</td>
+                                <td>38mm</td>
+                                <td>50,000</td>
+                                <td>$0.03-0.04</td>
+                            </tr>
+                            <tr>
+                                <td>PP Qopqoq</td>
+                                <td>48mm</td>
+                                <td>50,000</td>
+                                <td>$0.04-0.05</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            
+            <div class="price-note">
+                <p><strong>Eslatma:</strong> Narxlar taxminiy va o'zgarishi mumkin. Aniq narx uchun biz bilan bog'laning.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>PET Preform</h3>
+                    <p>Professional PET va PP mahsulotlari ishlab chiqaruvchisi</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link">Facebook</a>
+                        <a href="#" class="social-link">Instagram</a>
+                        <a href="#" class="social-link">Telegram</a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Sahifalar</h4>
+                    <ul>
+                        <li><a href="about.html">Biz haqimizda</a></li>
+                        <li><a href="products.html">Mahsulotlar</a></li>
+                        <li><a href="gallery.html">Galeriya</a></li>
+                        <li><a href="quality.html">Sifat Nazorati</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Xizmatlar</h4>
+                    <ul>
+                        <li><a href="calculator.html">Narx Kalkulyatori</a></li>
+                        <li><a href="quote.html">Narx so'rash</a></li>
+                        <li><a href="career.html">Karyera</a></li>
+                        <li><a href="contact.html">Kontaktlar</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Kontakt</h4>
+                    <p>📞 +998 90 123 45 67</p>
+                    <p>📧 info@petpreform.uz</p>
+                    <p>📍 Toshkent, O'zbekiston</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 PET Preform. Barcha huquqlar himoyalangan.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="calculator.js"></script>
+</body>
+</html>

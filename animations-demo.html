@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Samplast Style Animations Demo</title>
+    <link rel="stylesheet" href="styles-professional.css">
+    <link rel="stylesheet" href="styles-samplast-animations.css">
+    <style>
+        .demo-section {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 4rem 2rem;
+        }
+        .demo-container {
+            max-width: 1200px;
+            width: 100%;
+        }
+        .demo-title {
+            font-size: 2.5rem;
+            color: var(--navy-blue);
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+        .demo-description {
+            text-align: center;
+            color: var(--text-gray);
+            margin-bottom: 3rem;
+            font-size: 1.125rem;
+        }
+        .demo-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        .demo-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 16px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .demo-card h3 {
+            color: var(--primary-blue);
+            margin-bottom: 1rem;
+        }
+        .demo-card p {
+            color: var(--text-gray);
+            line-height: 1.6;
+        }
+        .effect-label {
+            display: inline-block;
+            background: var(--light-blue);
+            color: var(--primary-blue);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Scroll Progress Bar (avtomatik) -->
+    
+    <!-- Section 1: Fade Up -->
+    <section class="demo-section" style="background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);">
+        <div class="demo-container">
+            <div class="effect-label">Fade Up Animation</div>
+            <h1 class="demo-title fade-up">Fade Up Effect</h1>
+            <p class="demo-description fade-up">Bu elementlar pastdan yuqoriga fade in bo'ladi</p>
+            
+            <div class="demo-grid">
+                <div class="demo-card fade-up">
+                    <h3>Card 1</h3>
+                    <p>Bu card fade-up animatsiyasi bilan paydo bo'ladi</p>
+                </div>
+                <div class="demo-card fade-up">
+                    <h3>Card 2</h3>
+                    <p>Har bir card alohida animatsiya qiladi</p>
+                </div>
+                <div class="demo-card fade-up">
+                    <h3>Card 3</h3>
+                    <p>Scroll qiling va ko'ring!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 2: Fade Left & Right -->
+    <section class="demo-section" style="background: white;">
+        <div class="demo-container">
+            <div class="effect-label">Fade Left & Right</div>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center;">
+                <div class="fade-left">
+                    <h2 class="demo-title" style="text-align: left;">Chapdan</h2>
+                    <p style="color: var(--text-gray); line-height: 1.8;">
+                        Bu element chapdan o'ngga fade in bo'ladi. Samplast saytidagi kabi smooth animatsiya.
+                    </p>
+                </div>
+                <div class="fade-right">
+                    <h2 class="demo-title" style="text-align: right;">O'ngdan</h2>
+                    <p style="color: var(--text-gray); line-height: 1.8; text-align: right;">
+                        Bu element o'ngdan chapga fade in bo'ladi. Professional ko'rinish uchun.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 3: Scale In -->
+    <section class="demo-section" style="background: var(--light-gray);">
+        <div class="demo-container">
+            <div class="effect-label">Scale In Animation</div>
+            <h2 class="demo-title scale-in">Scale Effect</h2>
+            <p class="demo-description scale-in">Bu elementlar kichikdan kattaga scale bo'ladi</p>
+            
+            <div class="demo-grid">
+                <div class="demo-card scale-in">
+                    <div style="font-size: 3rem; margin-bottom: 1rem;">🎨</div>
+                    <h3>Dizayn</h3>
+                    <p>Zamonaviy va professional</p>
+                </div>
+                <div class="demo-card scale-in">
+                    <div style="font-size: 3rem; margin-bottom: 1rem;">⚡</div>
+                    <h3>Tezlik</h3>
+                    <p>Optimallashtirilgan animatsiyalar</p>
+                </div>
+                <div class="demo-card scale-in">
+                    <div style="font-size: 3rem; margin-bottom: 1rem;">✨</div>
+                    <h3>Effektlar</h3>
+                    <p>Smooth va professional</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 4: Counter Animation -->
+    <section class="demo-section" style="background: linear-gradient(135deg, var(--navy-blue), var(--primary-blue));">
+        <div class="demo-container">
+            <div class="effect-label" style="background: white; color: var(--primary-blue);">Counter Animation</div>
+            <h2 class="demo-title" style="color: white;">Statistika Animatsiyasi</h2>
+            <p class="demo-description" style="color: rgba(255,255,255,0.9);">Raqamlar avtomatik animatsiya qiladi</p>
+            
+            <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; margin-top: 3rem; text-align: center;">
+                <div>
+                    <div class="stat-number" style="font-size: 3rem; font-weight: 800; color: white;">200+</div>
+                    <div style="color: rgba(255,255,255,0.8);">Mijozlar</div>
+                </div>
+                <div>
+                    <div class="stat-number" style="font-size: 3rem; font-weight: 800; color: white;">98%</div>
+                    <div style="color: rgba(255,255,255,0.8);">Mamnuniyat</div>
+                </div>
+                <div>
+                    <div class="stat-number" style="font-size: 3rem; font-weight: 800; color: white;">50K+</div>
+                    <div style="color: rgba(255,255,255,0.8);">Mahsulotlar</div>
+                </div>
+                <div>
+                    <div class="stat-number" style="font-size: 3rem; font-weight: 800; color: white;">6+</div>
+                    <div style="color: rgba(255,255,255,0.8);">Yillik Tajriba</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 5: Hover Effects -->
+    <section class="demo-section" style="background: white;">
+        <div class="demo-container">
+            <div class="effect-label">Hover Effects</div>
+            <h2 class="demo-title">Interaktiv Kartalar</h2>
+            <p class="demo-description">Kartalar ustiga hover qiling</p>
+            
+            <div class="demo-grid">
+                <div class="card-corporate">
+                    <div style="font-size: 2rem; margin-bottom: 1rem;">🚀</div>
+                    <h3>Hover Effect 1</h3>
+                    <p>Yuqoriga ko'tariladi va scale bo'ladi</p>
+                </div>
+                <div class="card-corporate">
+                    <div style="font-size: 2rem; margin-bottom: 1rem;">💎</div>
+                    <h3>Hover Effect 2</h3>
+                    <p>Shadow kuchayadi</p>
+                </div>
+                <div class="card-corporate">
+                    <div style="font-size: 2rem; margin-bottom: 1rem;">✨</div>
+                    <h3>Hover Effect 3</h3>
+                    <p>Gradient shine effekti</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 6: Special Effects -->
+    <section class="demo-section" style="background: var(--off-white);">
+        <div class="demo-container">
+            <div class="effect-label">Maxsus Effektlar</div>
+            <h2 class="demo-title gradient-text">Gradient Text</h2>
+            <p class="demo-description">Qo'shimcha animatsiya effektlari</p>
+            
+            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; margin-top: 3rem;">
+                <div class="demo-card">
+                    <div class="bounce" style="font-size: 3rem; margin-bottom: 1rem;">⬇️</div>
+                    <h3>Bounce</h3>
+                    <p>Bounce animatsiyasi</p>
+                </div>
+                <div class="demo-card glow">
+                    <div style="font-size: 3rem; margin-bottom: 1rem;">💡</div>
+                    <h3>Glow</h3>
+                    <p>Glow effekti</p>
+                </div>
+                <div class="demo-card">
+                    <div style="font-size: 3rem; margin-bottom: 1rem;">🎯</div>
+                    <h3>Smooth</h3>
+                    <p>Smooth transitions</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 7: Final -->
+    <section class="demo-section" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+        <div class="demo-container" style="text-align: center;">
+            <h2 class="demo-title fade-up" style="color: white;">Barcha Effektlar Tayyor! 🎉</h2>
+            <p class="demo-description fade-up" style="color: rgba(255,255,255,0.9);">
+                Samplast saytidan ilhomlangan zamonaviy scroll animatsiyalar va effektlar
+            </p>
+            <div class="fade-up" style="margin-top: 2rem;">
+                <a href="index.html" class="btn btn-primary" style="background: white; color: var(--primary-blue);">
+                    Asosiy Saytga Qaytish
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <script src="animations-samplast.js"></script>
+</body>
+</html>

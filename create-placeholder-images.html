@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Placeholder Rasmlar Yaratish</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #2563eb;
+            margin-bottom: 10px;
+        }
+        .subtitle {
+            color: #666;
+            margin-bottom: 30px;
+        }
+        .section {
+            margin-bottom: 40px;
+        }
+        .section h2 {
+            color: #1e40af;
+            border-bottom: 2px solid #2563eb;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+        .image-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .image-item {
+            background: #f9fafb;
+            border: 2px solid #e5e7eb;
+            border-radius: 8px;
+            padding: 15px;
+            text-align: center;
+        }
+        .placeholder {
+            width: 100%;
+            height: 200px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 14px;
+            margin-bottom: 10px;
+            position: relative;
+            overflow: hidden;
+        }
+        .placeholder::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: repeating-linear-gradient(
+                45deg,
+                rgba(255,255,255,0.1),
+                rgba(255,255,255,0.1) 10px,
+                transparent 10px,
+                transparent 20px
+            );
+        }
+        .placeholder-text {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            padding: 10px;
+        }
+        .image-name {
+            font-size: 12px;
+            color: #374151;
+            font-weight: 600;
+            margin-top: 5px;
+        }
+        .status {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 11px;
+            font-weight: 600;
+            margin-top: 8px;
+        }
+        .status.exists {
+            background: #d1fae5;
+            color: #065f46;
+        }
+        .status.needed {
+            background: #fee2e2;
+            color: #991b1b;
+        }
+        .instructions {
+            background: #eff6ff;
+            border-left: 4px solid #2563eb;
+            padding: 20px;
+            margin: 30px 0;
+            border-radius: 6px;
+        }
+        .instructions h3 {
+            color: #1e40af;
+            margin-top: 0;
+        }
+        .instructions ol {
+            margin: 10px 0;
+            padding-left: 20px;
+        }
+        .instructions li {
+            margin: 8px 0;
+            color: #374151;
+        }
+        .download-btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background: #2563eb;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 600;
+            margin-top: 10px;
+        }
+        .download-btn:hover {
+            background: #1e40af;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🖼️ LP Plast - Rasmlar Qo'llanma</h1>
+        <p class="subtitle">Mahsulot va galeriya rasmlari uchun placeholder va yo'riqnoma</p>
+
+        <div class="instructions">
+            <h3>📋 Rasmlarni Qo'yish Tartibi:</h3>
+            <ol>
+                <li>Quyidagi ro'yxatda qaysi rasmlar kerakligini ko'ring</li>
+                <li>Har bir rasm uchun haqiqiy fotografiya tayyorlang</li>
+                <li>Rasmlarni to'g'ri papkaga joylashtiring (images/products/ yoki images/gallery/)</li>
+                <li>Fayl nomlarini aniq ko'rsatilganidek nomlang</li>
+                <li>Brauzerda sahifani yangilang (Ctrl+F5)</li>
+            </ol>
+            <p><strong>Rasm Talablari:</strong></p>
+            <ul>
+                <li>Format: JPG yoki PNG</li>
+                <li>O'lcham: 800x600px yoki 1200x900px</li>
+                <li>Fayl hajmi: 200KB dan kam</li>
+                <li>Sifat: Professional, yaxshi yoritilgan</li>
+            </ul>
+        </div>
+
+        <!-- PET Preforms -->
+        <div class="section">
+            <h2>PET Preformalar (images/products/)</h2>
+            <div class="image-grid">
+                <div class="image-item">
+                    <div class="placeholder">
+                        <div class="placeholder-text">PCO 2925<br>12g</div>
+                    </div>
+                    <div class="image-name">pco-2925-12g.jpg</div>
+                    <span class="status needed">Kerak</span>
+                </div>
+                <div class="image-item">
+                    <div class="placeholder">
+                        <div class="placeholder-text">PCO 2925<br>16g</div>
+                    </div>
+                    <div class="image-name">pco-2925-16g.jpg</div>
+                    <span class="status needed">Kerak</span>
+                </div>
+                <div class="image-item">
+                    <div class="placeholder">
+                        <div class="placeholder-text">PCO 2925<br>24g</div>
+                    </div>
+                    <div class="image-name">pco-2925-24g.jpg</div>
+                    <span class="status needed">Kerak</span>
+                </div>
+                <div class="image-item">
+                    <div class="placeholder">
+                        <div class="placeholder-text">PCO 1881<br>15g</div>
+                    </div>
+                    <div class="image-name">pco-1881-15g.jpg</div>
+                    <span class="status needed">Kerak</span>
+                </div>
+                <div class="image-item">
+                    <div class="placeholder">
+                        <div class="placeholder-text">PCO 1881<br>21g</div>
+                    </div>
+                    <div class="image-name">pco-1881-21g.jpg</div>
+                    <span class="status needed">Kerak</span>
+                </div>
+                <div class="image-item">
+                    <div class="placeholder">
+                        <div class="placeholder-text">PCO 1881<br>30g</div>
+                    </div>
+                    <div class="image-name">pco-1881-30g.jpg</div>
+                    <span class="status needed">Kerak</span>
+                </div>
+                <div class="image-item">
+                    <div class="placeholder">
+                        <div class="placeholder-text">Yog' Idishi<br>26g</div>
+                    </div>
+                    <div class="image-name">oil-bottle-26g.jpg</div>
+                    <span class="status needed">Kerak</span>
+                </div>
+                <div class="image-item">
+                    <div class="placeholder">
+                        <div class="placeholder-text">Yog' Idishi<br>36g</div>
+                    </div>
+                    <div class="image-name">oil-bottle-36g.jpg</div>
+                    <span class="status needed">Kerak</span>
+                </div>
+                <div class="image-item">
+                    <div class="placeholder">
+                        <div class="placeholder-text">Preform<br>52g 38mm</div>
+                    </div>
+                    <div class="image-name">preform-52g-38mm.jpg</div>
+                    <span class="status needed">Kerak</span>
+                </div>
+                <div class="image-item">
+                    <div class="placeholder">
+                        <div class="placeholder-text">Preform<br>70g 38mm</div>
+                    </div>
+                    <div class="image-name">preform-70g-38mm.jpg</div>
+                    <span class="status needed">Kerak</span>
+                </div>
+                <div class="image-item">
+                    <div class="placeholder">
+                        <div class="placeholder-text">Preform<br>72g 48mm</div>
+                    </div>
+                    <div class="image-name">preform-72g-48mm.jpg</div>
+                    <span class="status needed">Kerak</span>
+                </div>
+                <div class="image-item">
+                    <div class="placeholder">
+                        <div class="placeholder-text">Preform<br>135g 48mm</div>
+                    </div>
+                    <div class="image-name">preform-135g-48mm.jpg</div>
+                    <span class="status needed">Kerak</span>
+                </div>
+                <div class="image-item">
+                    <div class="placeholder">
+                        <div class="placeholder-text">Preform<br>250g 48mm</div>
+                    </div>
+                    <div class="image-name">preform-250g-48mm.jpg</div>
+                    <span class="status needed">Kerak</span>
+                </div>
+                <div class="image-item">
+                    <div class="placeholder">
+                        <div class="placeholder-text">Preform<br>700g 55mm</div>
+                    </div>
+                    <div class="image-name">preform-700g-55mm.jpg</div>
+                    <span class="status needed">Kerak</span>
+                </div>
+                <div class="image-item">
+                    <div class="placeholder">
+                        <div class="placeholder-text">Preform<br>670g 55mm</div>
+                    </div>
+                    <div class="image-name">preform-670g-55mm.jpg</div>
+                    <span class="status needed">Kerak</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- PP Caps -->
+        <div class="section">
+            <h2>PP Qopqoqlar (images/products/)</h2>
+            <div class="image-grid">
+                <div class="image-item">
+                    <div class="placeholder">
+                        <div class="placeholder-text">Qopqoq<br>48mm</div>
+                    </div>
+                    <div class="image-name">cap-48mm.jpg</div>
+                    <span class="status needed">Kerak</span>
+                </div>
+                <div class="image-item">
+                    <div class="placeholder">
+                        <div class="placeholder-text">Qopqoq<br>38mm</div>
+                    </div>
+                    <div class="image-name">cap-38mm.jpg</div>
+                    <span class="status needed">Kerak</span>
+                </div>
+                <div class="image-item">
+                    <div class="placeholder">
+                        <div class="placeholder-text">Gaz Qopqoq<br>28mm</div>
+                    </div>
+                    <div class="image-name">cap-28mm-gas.jpg</div>
+                    <span class="status needed">Kerak</span>
+                </div>
+                <div class="image-item">
+                    <div class="placeholder">
+                        <div class="placeholder-text">Gazsiz Qopqoq<br>28mm</div>
+                    </div>
+                    <div class="image-name">cap-28mm-no-gas.jpg</div>
+                    <span class="status needed">Kerak</span>
+                </div>
+                <div class="image-item">
+                    <div class="placeholder">
+                        <div class="placeholder-text">Yog' Qopqoq<br>DKM</div>
+                    </div>
+                    <div class="image-name">oil-cap-dkm.jpg</div>
+                    <span class="status needed">Kerak</span>
+                </div>
+                <div class="image-item">
+                    <div class="placeholder">
+                        <div class="placeholder-text">Yog' Qopqoq<br>OKM</div>
+                    </div>
+                    <div class="image-name">oil-cap-okm.jpg</div>
+                    <span class="status needed">Kerak</span>
+                </div>
+                <div class="image-item">
+                    <div class="placeholder">
+                        <div class="placeholder-text">Yog' Qopqoq<br>19L</div>
+                    </div>
+                    <div class="image-name">oil-cap-19l.jpg</div>
+                    <span class="status needed">Kerak</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Handles -->
+        <div class="section">
+            <h2>Tutqichlar (images/products/)</h2>
+            <div class="image-grid">
+                <div class="image-item">
+                    <div class="placeholder">
+                        <div class="placeholder-text">Tutqich<br>48mm</div>
+                    </div>
+                    <div class="image-name">handle-48mm.jpg</div>
+                    <span class="status needed">Kerak</span>
+                </div>
+                <div class="image-item">
+                    <div class="placeholder">
+                        <div class="placeholder-text">Tutqich<br>38mm</div>
+                    </div>
+                    <div class="image-name">handle-38mm.jpg</div>
+                    <span class="status needed">Kerak</span>
+                </div>
+                <div class="image-item">
+                    <div class="placeholder">
+                        <div class="placeholder-text">Tutqich<br>28mm</div>
+                    </div>
+                    <div class="image-name">handle-28mm.jpg</div>
+                    <span class="status needed">Kerak</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Gallery -->
+        <div class="section">
+            <h2>Galeriya Rasmlari (images/gallery/)</h2>
+            <div class="image-grid">
+                <div class="image-item">
+                    <div class="placeholder">
+                        <div class="placeholder-text">Zavod<br>Tashqi Ko'rinish</div>
+                    </div>
+                    <div class="image-name">factory-exterior-1.jpg</div>
+                    <span class="status exists">Mavjud</span>
+                </div>
+                <div class="image-item">
+                    <div class="placeholder">
+                        <div class="placeholder-text">Ishlab Chiqarish<br>Liniyasi</div>
+                    </div>
+                    <div class="image-name">production-line-1.jpg</div>
+                    <span class="status exists">Mavjud</span>
+                </div>
+                <div class="image-item">
+                    <div class="placeholder">
+                        <div class="placeholder-text">Injection<br>Machine</div>
+                    </div>
+                    <div class="image-name">injection-machine-1.jpg</div>
+                    <span class="status exists">Mavjud</span>
+                </div>
+                <div class="image-item">
+                    <div class="placeholder">
+                        <div class="placeholder-text">PET Preforms<br>Variety</div>
+                    </div>
+                    <div class="image-name">pet-preforms-variety.jpg</div>
+                    <span class="status exists">Mavjud</span>
+                </div>
+                <div class="image-item">
+                    <div class="placeholder">
+                        <div class="placeholder-text">Sifat Nazorati<br>Laboratoriya</div>
+                    </div>
+                    <div class="image-name">quality-control-1.jpg</div>
+                    <span class="status needed">Kerak</span>
+                </div>
+                <div class="image-item">
+                    <div class="placeholder">
+                        <div class="placeholder-text">HUSKY<br>Uskunasi</div>
+                    </div>
+                    <div class="image-name">injection-machine-2.jpg</div>
+                    <span class="status needed">Kerak</span>
+                </div>
+                <div class="image-item">
+                    <div class="placeholder">
+                        <div class="placeholder-text">NETSTAL<br>Uskunasi</div>
+                    </div>
+                    <div class="image-name">injection-machine-3.jpg</div>
+                    <span class="status needed">Kerak</span>
+                </div>
+                <div class="image-item">
+                    <div class="placeholder">
+                        <div class="placeholder-text">Turli Rangdagi<br>Preformlar</div>
+                    </div>
+                    <div class="image-name">pet-preforms-colors.jpg</div>
+                    <span class="status needed">Kerak</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="instructions">
+            <h3>🎯 Keyingi Qadamlar:</h3>
+            <ol>
+                <li><strong>Rasmlarni Tayyorlash:</strong> Professional fotografiya yoki stock photo saytlardan</li>
+                <li><strong>Optimizatsiya:</strong> TinyPNG.com yoki Squoosh.app da siqish</li>
+                <li><strong>Joylashtirish:</strong> images/products/ yoki images/gallery/ papkasiga</li>
+                <li><strong>Tekshirish:</strong> Brauzerda products.html va gallery.html sahifalarini ochish</li>
+            </ol>
+            <p><strong>Stock Photo Saytlar:</strong></p>
+            <ul>
+                <li>Unsplash.com - Bepul professional fotografiyalar</li>
+                <li>Pexels.com - Bepul yuqori sifatli rasmlar</li>
+                <li>Freepik.com - Bepul va premium rasmlar</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

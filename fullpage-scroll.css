@@ -1,0 +1,291 @@
+/* ============================================
+   SAMPLAST STYLE FULLPAGE SCROLL CSS
+   Layered sections with smooth animations
+   OPTIONAL: Add 'fullpage-enabled' class to body to activate
+   ============================================ */
+
+/* ============================================
+   BASE STYLES (Only when enabled)
+   ============================================ */
+body.fullpage-enabled {
+    overflow: hidden;
+    height: 100%;
+}
+
+body.fullpage-enabled html {
+    overflow: hidden;
+    height: 100%;
+}
+
+/* ============================================
+   SECTION STYLES (Only when enabled)
+   ============================================ */
+body.fullpage-enabled .fp-section {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: auto;
+}
+
+body.fullpage-enabled .fp-section.fp-active {
+    /* Active section styles */
+}
+
+/* ============================================
+   DOT NAVIGATION (Only when enabled)
+   ============================================ */
+body.fullpage-enabled .fp-nav {
+    position: fixed;
+    right: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Hide by default */
+.fp-nav {
+    display: none;
+}
+
+.fp-nav-item {
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.fp-nav-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: rgba(37, 99, 235, 0.3);
+    border: 2px solid rgba(37, 99, 235, 0.5);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    display: block;
+}
+
+.fp-nav-item:hover .fp-nav-dot {
+    background: rgba(37, 99, 235, 0.5);
+    border-color: rgba(37, 99, 235, 0.8);
+    transform: scale(1.2);
+}
+
+.fp-nav-item.active .fp-nav-dot {
+    background: #2563eb;
+    border-color: #2563eb;
+    transform: scale(1.3);
+    box-shadow: 0 0 10px rgba(37, 99, 235, 0.5);
+}
+
+/* Tooltip */
+.fp-nav-tooltip {
+    position: absolute;
+    right: 30px;
+    white-space: nowrap;
+    background: rgba(30, 41, 59, 0.95);
+    color: white;
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateX(10px);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.fp-nav-tooltip::after {
+    content: '';
+    position: absolute;
+    right: -6px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 0;
+    height: 0;
+    border-left: 6px solid rgba(30, 41, 59, 0.95);
+    border-top: 6px solid transparent;
+    border-bottom: 6px solid transparent;
+}
+
+.fp-nav-item:hover .fp-nav-tooltip {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* ============================================
+   ARROW NAVIGATION (Only when enabled)
+   ============================================ */
+body.fullpage-enabled .fp-arrows {
+    position: fixed;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    display: flex;
+    gap: 15px;
+}
+
+/* Hide by default */
+.fp-arrows {
+    display: none;
+}
+
+.fp-arrow {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.95);
+    border: 2px solid rgba(37, 99, 235, 0.2);
+    color: #2563eb;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.fp-arrow:hover {
+    background: #2563eb;
+    color: white;
+    border-color: #2563eb;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(37, 99, 235, 0.3);
+}
+
+.fp-arrow:active {
+    transform: translateY(-1px);
+}
+
+.fp-arrow svg {
+    width: 24px;
+    height: 24px;
+}
+
+/* ============================================
+   MOBILE STYLES
+   ============================================ */
+@media (max-width: 768px) {
+    .fp-nav {
+        right: 15px;
+        gap: 12px;
+    }
+    
+    .fp-nav-dot {
+        width: 10px;
+        height: 10px;
+    }
+    
+    .fp-nav-tooltip {
+        display: none;
+    }
+    
+    .fp-arrows {
+        bottom: 20px;
+        gap: 10px;
+    }
+    
+    .fp-arrow {
+        width: 45px;
+        height: 45px;
+    }
+}
+
+/* ============================================
+   ANIMATIONS
+   ============================================ */
+@keyframes fpFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fp-nav,
+.fp-arrows {
+    animation: fpFadeIn 0.6s ease-out 0.5s both;
+}
+
+/* ============================================
+   ACCESSIBILITY
+   ============================================ */
+.fp-arrow:focus-visible,
+.fp-nav-item:focus-visible {
+    outline: 2px solid #2563eb;
+    outline-offset: 4px;
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+    .fp-section {
+        transition: none !important;
+    }
+    
+    .fp-nav,
+    .fp-arrows {
+        animation: none !important;
+    }
+}
+
+/* ============================================
+   PRINT STYLES
+   ============================================ */
+@media print {
+    .fp-nav,
+    .fp-arrows {
+        display: none !important;
+    }
+    
+    .fp-section {
+        position: relative !important;
+        height: auto !important;
+        page-break-after: always;
+    }
+}
+
+/* ============================================
+   LOADING STATE
+   ============================================ */
+.fp-loading {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: white;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 1;
+    transition: opacity 0.5s ease;
+}
+
+.fp-loading.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.fp-loading-spinner {
+    width: 50px;
+    height: 50px;
+    border: 4px solid rgba(37, 99, 235, 0.2);
+    border-top-color: #2563eb;
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}

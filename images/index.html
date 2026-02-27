@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Images Folder - LP Plast</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 12px;
+            padding: 40px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+        h1 {
+            color: #1E88E5;
+            margin-bottom: 10px;
+        }
+        .subtitle {
+            color: #666;
+            margin-bottom: 30px;
+        }
+        .folder-structure {
+            background: #f5f5f5;
+            padding: 20px;
+            border-radius: 8px;
+            font-family: 'Courier New', monospace;
+            margin: 20px 0;
+            line-height: 1.8;
+        }
+        .folder { color: #1E88E5; font-weight: bold; }
+        .file { color: #E53935; }
+        .exists { color: #4CAF50; }
+        .section {
+            margin: 30px 0;
+        }
+        .section h2 {
+            color: #333;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #1E88E5;
+        }
+        .file-list {
+            list-style: none;
+            padding: 0;
+        }
+        .file-list li {
+            padding: 10px;
+            margin: 5px 0;
+            background: #f9f9f9;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+        }
+        .file-list li::before {
+            content: '📄';
+            margin-right: 10px;
+        }
+        .status {
+            margin-left: auto;
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: bold;
+        }
+        .status.missing {
+            background: #ffebee;
+            color: #c62828;
+        }
+        .status.exists {
+            background: #e8f5e9;
+            color: #2e7d32;
+        }
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            background: #1E88E5;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            margin: 10px 10px 10px 0;
+            transition: all 0.3s;
+        }
+        .btn:hover {
+            background: #1565C0;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(30, 136, 229, 0.4);
+        }
+        .btn.secondary {
+            background: #E53935;
+        }
+        .btn.secondary:hover {
+            background: #C62828;
+        }
+        .actions {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 30px;
+            border-top: 2px solid #eee;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🖼️ Images Folder</h1>
+        <p class="subtitle">LP Plast Website - Image Management</p>
+
+        <div class="folder-structure">
+<span class="folder">images/</span>
+├── <span class="exists">logo.svg</span> ✓
+├── <span class="folder">products/</span>
+│   ├── <span class="file">pet-preforms.jpg</span> ❌
+│   ├── <span class="file">pp-caps.jpg</span> ❌
+│   └── <span class="file">handles.jpg</span> ❌
+├── <span class="folder">gallery/</span>
+│   ├── <span class="file">factory-exterior-1.jpg</span> ❌
+│   ├── <span class="file">production-line-1.jpg</span> ❌
+│   ├── <span class="file">injection-machine-1.jpg</span> ❌
+│   └── <span class="file">pet-preforms-variety.jpg</span> ❌
+└── <span class="folder">quality/</span>
+    └── <span class="file">lab-testing.jpg</span> ❌
+        </div>
+
+        <div class="section">
+            <h2>📦 Required Images</h2>
+            <ul class="file-list">
+                <li>
+                    pet-preforms.jpg
+                    <span class="status missing">MISSING</span>
+                </li>
+                <li>
+                    pp-caps.jpg
+                    <span class="status missing">MISSING</span>
+                </li>
+                <li>
+                    handles.jpg
+                    <span class="status missing">MISSING</span>
+                </li>
+                <li>
+                    factory-exterior-1.jpg
+                    <span class="status missing">MISSING</span>
+                </li>
+                <li>
+                    production-line-1.jpg
+                    <span class="status missing">MISSING</span>
+                </li>
+                <li>
+                    injection-machine-1.jpg
+                    <span class="status missing">MISSING</span>
+                </li>
+                <li>
+                    pet-preforms-variety.jpg
+                    <span class="status missing">MISSING</span>
+                </li>
+                <li>
+                    lab-testing.jpg
+                    <span class="status missing">MISSING</span>
+                </li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>📋 What to Do</h2>
+            <ol style="line-height: 2;">
+                <li>Read <code>README.txt</code> in this folder</li>
+                <li>Download images from Google Images or stock photo sites</li>
+                <li>Save images with exact filenames shown above</li>
+                <li>Place images in correct subfolders (products/, gallery/, quality/)</li>
+                <li>Refresh website to see images</li>
+            </ol>
+        </div>
+
+        <div class="actions">
+            <h3 style="margin-bottom: 20px;">🚀 Quick Actions</h3>
+            <a href="../check-images.html" class="btn">Check Images Status</a>
+            <a href="../image-guide.html" class="btn">Visual Guide</a>
+            <a href="../RASMLAR_KORISATMA.txt" class="btn secondary">Instructions (UZ)</a>
+            <a href="../index.html" class="btn secondary">Back to Website</a>
+        </div>
+    </div>
+</body>
+</html>

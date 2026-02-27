@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile Navigation Test</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles-corporate.css">
+    <link rel="stylesheet" href="styles-dashboard.css">
+    
+    <style>
+        /* Test styles */
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        
+        .test-content {
+            padding: 100px 20px 50px;
+            text-align: center;
+        }
+        
+        .test-content h1 {
+            color: var(--primary-dark);
+            margin-bottom: 1rem;
+        }
+        
+        .test-content p {
+            color: var(--gray-600);
+            font-size: 1.125rem;
+        }
+        
+        .device-info {
+            background: var(--gray-100);
+            padding: 1.5rem;
+            border-radius: 12px;
+            margin: 2rem auto;
+            max-width: 500px;
+        }
+        
+        .device-info p {
+            margin: 0.5rem 0;
+            font-size: 1rem;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header class="header" id="header">
+        <nav class="nav">
+            <div class="container">
+                <a href="index.html" class="nav-brand">
+                    <img src="images/logo-lpplast.jpg" alt="LUX PET PLAST" class="logo">
+                    <span class="brand-name">LUX PET PLAST</span>
+                </a>
+                
+                <button class="mobile-menu-btn" aria-label="Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                
+                <ul class="nav-menu">
+                    <li><a href="#home" class="nav-link active">Bosh sahifa</a></li>
+                    <li><a href="#products" class="nav-link">Mahsulotlar</a></li>
+                    <li><a href="#quality" class="nav-link">Sifat</a></li>
+                    <li><a href="#about" class="nav-link">Biz haqimizda</a></li>
+                    <li><a href="#contact" class="nav-link">Kontaktlar</a></li>
+                    
+                    <li class="language-switcher">
+                        <button class="lang-btn active" data-lang="uz">UZ</button>
+                        <button class="lang-btn" data-lang="ru">RU</button>
+                        <button class="lang-btn" data-lang="en">EN</button>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- TEST CONTENT -->
+    <div class="test-content">
+        <h1>Mobile Navigation Test</h1>
+        <p>Hamburger menu tugmasini bosing va navigation ochilishini tekshiring</p>
+        
+        <div class="device-info">
+            <p><strong>Screen Width:</strong> <span id="screenWidth"></span>px</p>
+            <p><strong>Screen Height:</strong> <span id="screenHeight"></span>px</p>
+            <p><strong>Device Type:</strong> <span id="deviceType"></span></p>
+        </div>
+        
+        <div style="margin-top: 2rem;">
+            <h3 style="color: var(--primary-dark); margin-bottom: 1rem;">Test Qilish:</h3>
+            <ol style="text-align: left; max-width: 500px; margin: 0 auto; color: var(--gray-700);">
+                <li style="margin-bottom: 0.75rem;">Hamburger menu tugmasini bosing (3 ta chiziq)</li>
+                <li style="margin-bottom: 0.75rem;">Navigation menu ochilishi kerak</li>
+                <li style="margin-bottom: 0.75rem;">Menu itemlarini bosing</li>
+                <li style="margin-bottom: 0.75rem;">Yana hamburger tugmasini bosib yoping</li>
+                <li style="margin-bottom: 0.75rem;">Til tugmalarini test qiling</li>
+            </ol>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        // Display device info
+        function updateDeviceInfo() {
+            document.getElementById('screenWidth').textContent = window.innerWidth;
+            document.getElementById('screenHeight').textContent = window.innerHeight;
+            
+            let deviceType = 'Desktop';
+            if (window.innerWidth <= 480) {
+                deviceType = 'Mobile Small';
+            } else if (window.innerWidth <= 768) {
+                deviceType = 'Mobile/Tablet';
+            } else if (window.innerWidth <= 1024) {
+                deviceType = 'Tablet';
+            }
+            document.getElementById('deviceType').textContent = deviceType;
+        }
+        
+        updateDeviceInfo();
+        window.addEventListener('resize', updateDeviceInfo);
+        
+        // Mobile Navigation Toggle
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+            const navMenu = document.querySelector('.nav-menu');
+            
+            console.log('Mobile menu button:', mobileMenuBtn);
+            console.log('Nav menu:', navMenu);
+            
+            if (mobileMenuBtn && navMenu) {
+                mobileMenuBtn.addEventListener('click', function() {
+                    console.log('Menu button clicked!');
+                    navMenu.classList.toggle('active');
+                    mobileMenuBtn.classList.toggle('active');
+                    console.log('Menu active:', navMenu.classList.contains('active'));
+                });
+                
+                // Close menu when clicking on a link
+                const navLinks = document.querySelectorAll('.nav-link');
+                navLinks.forEach(link => {
+                    link.addEventListener('click', function(e) {
+                        e.preventDefault();
+                        console.log('Nav link clicked:', this.textContent);
+                        navMenu.classList.remove('active');
+                        mobileMenuBtn.classList.remove('active');
+                        
+                        // Update active state
+                        navLinks.forEach(l => l.classList.remove('active'));
+                        this.classList.add('active');
+                    });
+                });
+                
+                // Close menu when clicking outside
+                document.addEventListener('click', function(e) {
+                    if (!mobileMenuBtn.contains(e.target) && !navMenu.contains(e.target)) {
+                        navMenu.classList.remove('active');
+                        mobileMenuBtn.classList.remove('active');
+                    }
+                });
+                
+                console.log('Mobile navigation initialized successfully!');
+            } else {
+                console.error('Mobile menu elements not found!');
+            }
+        });
+    </script>
+</body>
+</html>

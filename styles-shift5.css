@@ -1,0 +1,41 @@
+/* ============================================
+   LP PLAST - SHIFT5 INSPIRED DESIGN
+   Dark, Tech, Futuristic, Data-Driven
+   ============================================ */
+
+:root {
+    /* Dark Theme Colors */
+    --bg-primary: #0a0e1a;
+    --bg-secondary: #111827;
+    --bg-tertiary: #1a1f35;
+    --bg-card: #1e2538;
+    
+    /* Neon Accents */
+    --neon-blue: #00d4ff;
+    --neon-cyan: #00ffff;
+    --neon-purple: #a855f7;
+    --neon-green: #00ff88;
+    --neon-pink: #ff00ff;
+    
+    /* Primary Colors */
+    --primary: #0ea5e9;
+    --primary-light: #38bdf8;
+    --primary-dark: #0284c7;
+    
+    /* Text Colors */
+    --text-primary: #f8fafc;
+    --text-secondary: #cbd5e1;
+    --text-muted: #64748b;
+    
+    /* Border & Divider */
+    --border-color: rgba(148, 163, 184, 0.1);
+    --border-glow: rgba(14, 165, 233, 0.3);
+    
+    /* Typography */
+    --font-mono: 'JetBrains Mono', 'Fira Code', 'Courier New', monospace;
+    --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-display: 'Space Grotesk', sans-serif;
+    
+    /* Spacing */
+    --space-1: 0.25rem;
+  

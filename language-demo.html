@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LP Plast - Multi-Language Demo</title>
+    <link rel="stylesheet" href="styles-premium.css">
+    <script src="translations.js"></script>
+    <style>
+        body {
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .demo-section {
+            background: white;
+            padding: 2rem;
+            border-radius: 16px;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+        }
+        .demo-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: #1e40af;
+        }
+        .demo-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1rem;
+        }
+        .demo-item {
+            padding: 1rem;
+            background: #f8fafc;
+            border-radius: 8px;
+            border-left: 4px solid #1e40af;
+        }
+        .demo-label {
+            font-size: 0.875rem;
+            color: #64748b;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+        .demo-text {
+            font-size: 1rem;
+            color: #0f172a;
+            font-weight: 500;
+        }
+        .header-demo {
+            background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%);
+            padding: 2rem;
+            border-radius: 16px;
+            color: white;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+        .language-switcher {
+            justify-content: center;
+            margin: 2rem auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="header-demo">
+        <h1 style="margin-bottom: 1rem;">🌍 Multi-Language System Demo</h1>
+        <p style="opacity: 0.9;">Tilni o'zgartiring va barcha matnlar avtomatik tarjima qilinadi</p>
+    </div>
+
+    <!-- Language Switcher will be inserted here by JavaScript -->
+
+    <div class="demo-section">
+        <div class="demo-title">Navigation Menu</div>
+        <div class="demo-grid">
+            <div class="demo-item">
+                <div class="demo-label">Home</div>
+                <div class="demo-text" data-i18n="nav_home">Bosh sahifa</div>
+            </div>
+            <div class="demo-item">
+                <div class="demo-label">Products</div>
+                <div class="demo-text" data-i18n="nav_products">Mahsulotlar</div>
+            </div>
+            <div class="demo-item">
+                <div class="demo-label">Quality</div>
+                <div class="demo-text" data-i18n="nav_quality">Sifat</div>
+            </div>
+            <div class="demo-item">
+                <div class="demo-label">Gallery</div>
+                <div class="demo-text" data-i18n="nav_gallery">Galeriya</div>
+            </div>
+            <div class="demo-item">
+                <div class="demo-label">Contact</div>
+                <div class="demo-text" data-i18n="nav_contact">Kontaktlar</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="demo-section">
+        <div class="demo-title">Hero Section</div>
+        <div class="demo-grid">
+            <div class="demo-item">
+                <div class="demo-label">Title Line 1</div>
+                <div class="demo-text" data-i18n="hero_title_1">O'zbekistonning Yetakchi</div>
+            </div>
+            <div class="demo-item">
+                <div class="demo-label">Title Line 2</div>
+                <div class="demo-text" data-i18n="hero_title_2">PET va PP Mahsulotlari</div>
+            </div>
+            <div class="demo-item">
+                <div class="demo-label">Title Line 3</div>
+                <div class="demo-text" data-i18n="hero_title_3">Ishlab Chiqaruvchisi</div>
+            </div>
+        </div>
+        <div style="margin-top: 1rem; padding: 1rem; background: #f8fafc; border-radius: 8px;">
+            <div class="demo-label">Description</div>
+            <div class="demo-text" data-i18n="hero_description">
+                2018-yildan beri zamonaviy Yevropa texnologiyalari (HUSKY, NETSTAL) bilan yuqori sifatli PET preformalar, PP qopqoqlar va tutqichlar ishlab chiqaramiz.
+            </div>
+        </div>
+    </div>
+
+    <div class="demo-section">
+        <div class="demo-title">Statistics</div>
+        <div class="demo-grid">
+            <div class="demo-item">
+                <div class="demo-label">Stat 1</div>
+                <div class="demo-text" data-i18n="hero_stat_1">Yillik Tajriba</div>
+            </div>
+            <div class="demo-item">
+                <div class="demo-label">Stat 2</div>
+                <div class="demo-text" data-i18n="hero_stat_2">Kunlik Quvvat</div>
+            </div>
+            <div class="demo-item">
+                <div class="demo-label">Stat 3</div>
+                <div class="demo-text" data-i18n="hero_stat_3">Hamkorlar</div>
+            </div>
+            <div class="demo-item">
+                <div class="demo-label">Stat 4</div>
+                <div class="demo-text" data-i18n="hero_stat_4">Mamnuniyat</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="demo-section">
+        <div class="demo-title">Buttons</div>
+        <div class="demo-grid">
+            <div class="demo-item">
+                <div class="demo-label">Quote Button</div>
+                <div class="demo-text" data-i18n="hero_btn_quote">Narx So'rash</div>
+            </div>
+            <div class="demo-item">
+                <div class="demo-label">Catalog Button</div>
+                <div class="demo-text" data-i18n="hero_btn_catalog">Mahsulotlar Katalogi</div>
+            </div>
+            <div class="demo-item">
+                <div class="demo-label">Learn More</div>
+                <div class="demo-text" data-i18n="btn_learn_more">Batafsil</div>
+            </div>
+            <div class="demo-item">
+                <div class="demo-label">Contact</div>
+                <div class="demo-text" data-i18n="btn_contact">Bog'lanish</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="demo-section">
+        <div class="demo-title">Products</div>
+        <div class="demo-grid">
+            <div class="demo-item">
+                <div class="demo-label">PET Preforms</div>
+                <div class="demo-text" data-i18n="products_pet_title">PET Preformalar</div>
+            </div>
+            <div class="demo-item">
+                <div class="demo-label">PP Caps</div>
+                <div class="demo-text" data-i18n="products_pp_title">PP Qopqoqlar</div>
+            </div>
+            <div class="demo-item">
+                <div class="demo-label">Handles</div>
+                <div class="demo-text" data-i18n="products_handles_title">Tutqichlar (Handles)</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="demo-section">
+        <div class="demo-title">Certifications</div>
+        <div class="demo-grid">
+            <div class="demo-item">
+                <div class="demo-label">ISO 9001</div>
+                <div class="demo-text" data-i18n="cert_iso9001_title">ISO 9001:2015</div>
+            </div>
+            <div class="demo-item">
+                <div class="demo-label">ISO 22000</div>
+                <div class="demo-text" data-i18n="cert_iso22000_title">ISO 22000:2018</div>
+            </div>
+            <div class="demo-item">
+                <div class="demo-label">HACCP</div>
+                <div class="demo-text" data-i18n="cert_haccp_title">HACCP</div>
+            </div>
+            <div class="demo-item">
+                <div class="demo-label">FDA</div>
+                <div class="demo-text" data-i18n="cert_fda_title">FDA Approved</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="demo-section">
+        <div class="demo-title">Common Terms</div>
+        <div class="demo-grid">
+            <div class="demo-item">
+                <div class="demo-label">Phone</div>
+                <div class="demo-text" data-i18n="common_phone">Telefon</div>
+            </div>
+            <div class="demo-item">
+                <div class="demo-label">Email</div>
+                <div class="demo-text" data-i18n="common_email">Email</div>
+            </div>
+            <div class="demo-item">
+                <div class="demo-label">Address</div>
+                <div class="demo-text" data-i18n="common_address">Manzil</div>
+            </div>
+            <div class="demo-item">
+                <div class="demo-label">Location</div>
+                <div class="demo-text" data-i18n="common_location">Toshkent, O'zbekiston</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="demo-section" style="background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%); color: white;">
+        <div class="demo-title" style="color: white;">Current Language Info</div>
+        <div style="padding: 1rem; background: rgba(255,255,255,0.1); border-radius: 8px; backdrop-filter: blur(10px);">
+            <p><strong>Current Language:</strong> <span id="currentLang">uz</span></p>
+            <p><strong>Stored in LocalStorage:</strong> <span id="storedLang">uz</span></p>
+            <p><strong>Total Translations:</strong> <span id="totalTrans">0</span></p>
+        </div>
+    </div>
+
+    <script>
+        // Update language info
+        function updateLanguageInfo() {
+            if (window.langManager) {
+                document.getElementById('currentLang').textContent = window.langManager.currentLang;
+                document.getElementById('storedLang').textContent = localStorage.getItem('lpplast_language') || 'none';
+                document.getElementById('totalTrans').textContent = Object.keys(translations[window.langManager.currentLang]).length;
+            }
+        }
+
+        // Listen for language changes
+        window.addEventListener('languageChanged', function(e) {
+            updateLanguageInfo();
+            console.log('Language changed to:', e.detail.lang);
+        });
+
+        // Initial update
+        setTimeout(updateLanguageInfo, 500);
+    </script>
+</body>
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oddiy Test</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 2rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .test-box {
+            background: #f0f0f0;
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 8px;
+        }
+        .buttons {
+            margin: 2rem 0;
+            display: flex;
+            gap: 1rem;
+        }
+        button {
+            padding: 1rem 2rem;
+            font-size: 1.125rem;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            background: #3b82f6;
+            color: white;
+        }
+        button:hover {
+            background: #2563eb;
+        }
+        .error {
+            background: #fee;
+            color: #c00;
+            padding: 1rem;
+            border-radius: 8px;
+            margin: 1rem 0;
+        }
+        .success {
+            background: #efe;
+            color: #060;
+            padding: 1rem;
+            border-radius: 8px;
+            margin: 1rem 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>🧪 ODDIY TEST</h1>
+    
+    <div id="status"></div>
+    
+    <div class="buttons">
+        <button onclick="testTranslations()">Test Translations</button>
+        <button onclick="switchToRussian()">Rus Tiliga O'tish</button>
+        <button onclick="switchToEnglish()">Ingliz Tiliga O'tish</button>
+    </div>
+    
+    <div class="test-box">
+        <h2>Test Matnlar:</h2>
+        <p><strong>nav_home:</strong> <span data-i18n="nav_home">Bosh sahifa</span></p>
+        <p><strong>nav_products:</strong> <span data-i18n="nav_products">Mahsulotlar</span></p>
+        <p><strong>hero_title_1:</strong> <span data-i18n="hero_title_1">O'zbekistonning Yetakchi</span></p>
+    </div>
+    
+    <div id="console-log" style="background: #000; color: #0f0; padding: 1rem; border-radius: 8px; font-family: monospace; max-height: 300px; overflow-y: auto;">
+        <strong>Console Log:</strong><br>
+    </div>
+
+    <script src="translations.js"></script>
+    <script>
+        // Console ni sahifaga chiqarish
+        const consoleLog = document.getElementById('console-log');
+        const originalLog = console.log;
+        console.log = function(...args) {
+            originalLog.apply(console, args);
+            consoleLog.innerHTML += args.join(' ') + '<br>';
+        };
+        
+        const originalError = console.error;
+        console.error = function(...args) {
+            originalError.apply(console, args);
+            consoleLog.innerHTML += '<span style="color: #f00;">' + args.join(' ') + '</span><br>';
+        };
+        
+        // Test funksiyalari
+        function testTranslations() {
+            const status = document.getElementById('status');
+            
+            if (typeof translations === 'undefined') {
+                status.innerHTML = '<div class="error">❌ translations ob\'ekti topilmadi!</div>';
+                return;
+            }
+            
+            if (typeof window.langManager === 'undefined') {
+                status.innerHTML = '<div class="error">❌ langManager topilmadi!</div>';
+                return;
+            }
+            
+            status.innerHTML = '<div class="success">✅ Translations va langManager mavjud!</div>';
+            console.log('✅ Test muvaffaqiyatli!');
+        }
+        
+        function switchToRussian() {
+            if (window.langManager) {
+                window.langManager.switchLanguage('ru');
+                console.log('🔄 Rus tiliga o\'tildi');
+            } else {
+                console.error('❌ langManager topilmadi!');
+            }
+        }
+        
+        function switchToEnglish() {
+            if (window.langManager) {
+                window.langManager.switchLanguage('en');
+                console.log('🔄 Ingliz tiliga o\'tildi');
+            } else {
+                console.error('❌ langManager topilmadi!');
+            }
+        }
+        
+        // Sahifa yuklanganda
+        window.addEventListener('load', function() {
+            console.log('📄 Sahifa to\'liq yuklandi');
+            setTimeout(testTranslations, 1000);
+        });
+    </script>
+</body>
+</html>

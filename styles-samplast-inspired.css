@@ -1,0 +1,855 @@
+/* ============================================
+   LP PLAST - SAMPLAST INSPIRED DESIGN
+   Professional Window Opening Animations
+   Industrial Background Patterns
+   ============================================ */
+
+:root {
+    /* Samplast-style Colors */
+    --primary-dark: #1a1f2e;
+    --primary-blue: #2c3e50;
+    --accent-blue: #3498db;
+    --accent-orange: #e67e22;
+    --text-dark: #2c3e50;
+    --text-light: #7f8c8d;
+    --bg-light: #f8f9fa;
+    --white: #ffffff;
+    
+    /* Industrial Gradients */
+    --gradient-dark: linear-gradient(135deg, #1a1f2e 0%, #2c3e50 100%);
+    --gradient-blue: linear-gradient(135deg, #2980b9 0%, #3498db 100%);
+    --gradient-overlay: linear-gradient(180deg, rgba(26, 31, 46, 0.9) 0%, rgba(44, 62, 80, 0.85) 100%);
+    
+    /* Shadows - Samplast Style */
+    --shadow-card: 0 10px 40px rgba(0, 0, 0, 0.1);
+    --shadow-hover: 0 20px 60px rgba(0, 0, 0, 0.15);
+    --shadow-modal: 0 25px 80px rgba(0, 0, 0, 0.25);
+    
+    /* Transitions - Smooth Professional */
+    --transition-modal: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    --transition-card: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-smooth: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ============================================
+   RESET & BASE
+   ============================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', 'Roboto', -apple-system, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--text-dark);
+    background: var(--white);
+    overflow-x: hidden;
+}
+
+/* ============================================
+   INDUSTRIAL BACKGROUND PATTERNS
+   Samplast-style subtle textures
+   ============================================ */
+
+.bg-pattern-dots {
+    position: relative;
+    background-color: var(--bg-light);
+}
+
+.bg-pattern-dots::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(circle, rgba(44, 62, 80, 0.05) 1px, transparent 1px);
+    background-size: 30px 30px;
+    pointer-events: none;
+}
+
+.bg-pattern-grid {
+    position: relative;
+    background-color: var(--white);
+}
+
+.bg-pattern-grid::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        linear-gradient(rgba(44, 62, 80, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(44, 62, 80, 0.03) 1px, transparent 1px);
+    background-size: 50px 50px;
+    pointer-events: none;
+}
+
+.bg-pattern-diagonal {
+    position: relative;
+    background: linear-gradient(135deg, #f8f9fa 25%, transparent 25%),
+                linear-gradient(225deg, #f8f9fa 25%, transparent 25%),
+                linear-gradient(45deg, #f8f9fa 25%, transparent 25%),
+                linear-gradient(315deg, #f8f9fa 25%, #ffffff 25%);
+    background-size: 60px 60px;
+    background-position: 0 0, 30px 0, 30px -30px, 0 30px;
+}
+
+.bg-industrial-dark {
+    background: var(--gradient-dark);
+    position: relative;
+}
+
+.bg-industrial-dark::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        repeating-linear-gradient(
+            0deg,
+            transparent,
+            transparent 2px,
+            rgba(255, 255, 255, 0.03) 2px,
+            rgba(255, 255, 255, 0.03) 4px
+        );
+    pointer-events: none;
+}
+
+/* ============================================
+   HEADER & NAVIGATION - Optimized
+   ============================================ */
+
+/* Header overridden by styles-premium - solid background */
+
+.header.scrolled {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 2px 20px rgba(0,0,0,0.08);
+    padding: 0.5rem 0;
+}
+
+.header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 3rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.header .nav-brand {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.header .logo {
+    height: 40px;
+    transition: all 0.3s ease;
+}
+
+.header.scrolled .logo {
+    height: 35px;
+}
+
+.header .brand-name {
+    font-size: 1.25rem;
+    font-weight: 900;
+    color: var(--primary-blue);
+    letter-spacing: 0.05em;
+    transition: all 0.3s ease;
+}
+
+.header.scrolled .brand-name {
+    color: var(--primary-blue);
+    font-size: 1.125rem;
+}
+
+.header nav ul {
+    display: flex;
+    list-style: none;
+    gap: 0.25rem;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.header nav ul li a {
+    display: block;
+    padding: 0.5rem 1rem;
+    color: var(--text-dark);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.header.scrolled nav ul li a {
+    color: var(--text-dark);
+}
+
+.header nav ul li a:hover {
+    color: var(--accent-blue);
+    background: rgba(52, 152, 219, 0.1);
+}
+
+.header nav ul li a.active {
+    color: var(--accent-blue);
+}
+
+.header nav ul li a.active::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60%;
+    height: 2px;
+    background: var(--accent-blue);
+}
+
+/* ============================================
+   HERO SECTION - Samplast Style
+   Full-screen with industrial overlay
+   ============================================ */
+
+.hero-samplast {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background: var(--gradient-dark);
+    padding-top: 80px;
+}
+
+/* Industrial Background Image */
+.hero-samplast::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('images/factory-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    opacity: 0.3;
+    z-index: 1;
+}
+
+/* Diagonal Overlay Pattern */
+.hero-samplast::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--gradient-overlay);
+    z-index: 2;
+    background-image: 
+        repeating-linear-gradient(
+            45deg,
+            transparent,
+            transparent 10px,
+            rgba(255, 255, 255, 0.02) 10px,
+            rgba(255, 255, 255, 0.02) 20px
+        );
+}
+
+.hero-samplast .container {
+    position: relative;
+    z-index: 3;
+}
+
+/* ============================================
+   MODAL WINDOW - SAMPLAST STYLE
+   Smooth scale-up with backdrop blur
+   ============================================ */
+
+.modal-samplast {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.4s ease, visibility 0.4s ease;
+}
+
+.modal-samplast.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Backdrop with Blur */
+.modal-samplast-backdrop {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(26, 31, 46, 0.75);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    transition: var(--transition-modal);
+    opacity: 0;
+}
+
+.modal-samplast.active .modal-samplast-backdrop {
+    opacity: 1;
+}
+
+/* Modal Content - Window Opening Effect */
+.modal-samplast-content {
+    position: relative;
+    z-index: 1;
+    background: var(--white);
+    border-radius: 12px;
+    max-width: 900px;
+    width: 90%;
+    max-height: 85vh;
+    overflow-y: auto;
+    box-shadow: var(--shadow-modal);
+    transform: scale(0.7) translateY(50px);
+    opacity: 0;
+    transition: var(--transition-modal);
+}
+
+.modal-samplast.active .modal-samplast-content {
+    transform: scale(1) translateY(0);
+    opacity: 1;
+}
+
+/* Modal Header */
+.modal-samplast-header {
+    padding: 2.5rem;
+    border-bottom: 1px solid #e9ecef;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+}
+
+.modal-samplast-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin: 0;
+    line-height: 1.3;
+}
+
+.modal-samplast-close {
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid #dee2e6;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.75rem;
+    color: var(--text-light);
+    transition: var(--transition-card);
+    flex-shrink: 0;
+    margin-left: 1rem;
+}
+
+.modal-samplast-close:hover {
+    background: var(--accent-blue);
+    border-color: var(--accent-blue);
+    color: var(--white);
+    transform: rotate(90deg);
+}
+
+.modal-samplast-body {
+    padding: 2.5rem;
+}
+
+/* ============================================
+   CARD ANIMATIONS - Samplast Style
+   Smooth lift and shadow expansion
+   ============================================ */
+
+.card-samplast {
+    background: var(--white);
+    border-radius: 12px;
+    padding: 2.5rem;
+    box-shadow: var(--shadow-card);
+    transition: var(--transition-card);
+    position: relative;
+    overflow: hidden;
+}
+
+.card-samplast::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: var(--gradient-blue);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: var(--transition-card);
+}
+
+.card-samplast:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-hover);
+}
+
+.card-samplast:hover::before {
+    transform: scaleX(1);
+}
+
+/* ============================================
+   SECTION REVEAL - Samplast Style
+   Fade + Slide with stagger
+   ============================================ */
+
+.reveal-samplast {
+    opacity: 0;
+    transform: translateY(80px);
+    transition: opacity 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+                transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.reveal-samplast.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.reveal-samplast-left {
+    opacity: 0;
+    transform: translateX(-80px);
+    transition: opacity 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+                transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.reveal-samplast-left.active {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.reveal-samplast-right {
+    opacity: 0;
+    transform: translateX(80px);
+    transition: opacity 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+                transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.reveal-samplast-right.active {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Stagger Delays */
+.delay-100 { transition-delay: 0.1s; }
+.delay-200 { transition-delay: 0.2s; }
+.delay-300 { transition-delay: 0.3s; }
+.delay-400 { transition-delay: 0.4s; }
+.delay-500 { transition-delay: 0.5s; }
+
+/* ============================================
+   IMAGE GALLERY - Samplast Style
+   Smooth zoom and overlay
+   ============================================ */
+
+.gallery-samplast {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.gallery-item-samplast {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: var(--shadow-card);
+    transition: var(--transition-card);
+}
+
+.gallery-item-samplast img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    transition: var(--transition-card);
+}
+
+.gallery-item-samplast:hover img {
+    transform: scale(1.1);
+}
+
+.gallery-overlay-samplast {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--gradient-overlay);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: var(--transition-card);
+}
+
+.gallery-item-samplast:hover .gallery-overlay-samplast {
+    opacity: 1;
+}
+
+.gallery-overlay-samplast h3 {
+    color: var(--white);
+    font-size: 1.5rem;
+    font-weight: 700;
+    transform: translateY(20px);
+    transition: var(--transition-card);
+}
+
+.gallery-item-samplast:hover .gallery-overlay-samplast h3 {
+    transform: translateY(0);
+}
+
+/* ============================================
+   ACCORDION - Samplast Style
+   Smooth height expansion
+   ============================================ */
+
+.accordion-samplast {
+    background: var(--white);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: var(--shadow-card);
+    margin-bottom: 1rem;
+    transition: var(--transition-card);
+}
+
+.accordion-samplast:hover {
+    box-shadow: var(--shadow-hover);
+}
+
+.accordion-header-samplast {
+    padding: 1.75rem 2rem;
+    background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: var(--transition-card);
+    border-bottom: 1px solid transparent;
+}
+
+.accordion-header-samplast:hover {
+    background: linear-gradient(135deg, #e9ecef 0%, #f8f9fa 100%);
+}
+
+.accordion-header-samplast.active {
+    border-bottom-color: #e9ecef;
+    background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+}
+
+.accordion-title-samplast {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    margin: 0;
+    line-height: 1.5;
+    padding-right: 1rem;
+}
+
+.accordion-icon-samplast {
+    width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--accent-blue);
+    font-size: 1.25rem;
+    transition: var(--transition-card);
+    flex-shrink: 0;
+}
+
+.accordion-header-samplast.active .accordion-icon-samplast {
+    transform: rotate(180deg);
+}
+
+.accordion-body-samplast {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+                padding 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    padding: 0 2rem;
+}
+
+.accordion-header-samplast.active + .accordion-body-samplast {
+    max-height: 1000px;
+    padding: 2rem;
+}
+
+/* ============================================
+   TABS - Samplast Style
+   Smooth content switching
+   ============================================ */
+
+.tabs-samplast {
+    background: var(--white);
+    border-radius: 12px;
+    box-shadow: var(--shadow-card);
+    overflow: hidden;
+}
+
+.tabs-nav-samplast {
+    display: flex;
+    background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+    border-bottom: 2px solid #e9ecef;
+}
+
+.tab-button-samplast {
+    flex: 1;
+    padding: 1.25rem 2rem;
+    background: transparent;
+    border: none;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-light);
+    cursor: pointer;
+    position: relative;
+    transition: var(--transition-card);
+}
+
+.tab-button-samplast::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: var(--accent-blue);
+    transform: scaleX(0);
+    transition: var(--transition-card);
+}
+
+.tab-button-samplast:hover {
+    color: var(--text-dark);
+    background: rgba(52, 152, 219, 0.05);
+}
+
+.tab-button-samplast.active {
+    color: var(--accent-blue);
+}
+
+.tab-button-samplast.active::after {
+    transform: scaleX(1);
+}
+
+.tab-content-samplast {
+    padding: 2.5rem;
+}
+
+.tab-pane-samplast {
+    display: none;
+    opacity: 0;
+    animation: fadeInTab 0.5s ease forwards;
+}
+
+.tab-pane-samplast.active {
+    display: block;
+}
+
+@keyframes fadeInTab {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ============================================
+   STATS COUNTER - Samplast Style
+   ============================================ */
+
+.stats-samplast {
+    background: var(--gradient-dark);
+    padding: 5rem 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.stats-samplast::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        repeating-linear-gradient(
+            45deg,
+            transparent,
+            transparent 20px,
+            rgba(255, 255, 255, 0.02) 20px,
+            rgba(255, 255, 255, 0.02) 40px
+        );
+}
+
+.stats-grid-samplast {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 3rem;
+    position: relative;
+    z-index: 1;
+}
+
+.stat-item-samplast {
+    text-align: center;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: var(--transition-card);
+}
+
+.stat-item-samplast:hover {
+    background: rgba(255, 255, 255, 0.08);
+    transform: translateY(-5px);
+}
+
+.stat-number-samplast {
+    font-size: 3.5rem;
+    font-weight: 900;
+    color: var(--white);
+    line-height: 1;
+    margin-bottom: 0.5rem;
+}
+
+.stat-label-samplast {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.8);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-weight: 600;
+}
+
+/* ============================================
+   BUTTON STYLES - Samplast Inspired
+   ============================================ */
+
+.btn-samplast {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1rem 2.5rem;
+    font-size: 1rem;
+    font-weight: 700;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    border-radius: 6px;
+    transition: var(--transition-card);
+    cursor: pointer;
+    border: none;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-samplast::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.2);
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
+}
+
+.btn-samplast:hover::before {
+    width: 300px;
+    height: 300px;
+}
+
+.btn-samplast-primary {
+    background: var(--gradient-blue);
+    color: var(--white);
+    box-shadow: 0 4px 15px rgba(52, 152, 219, 0.3);
+}
+
+.btn-samplast-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(52, 152, 219, 0.4);
+}
+
+.btn-samplast-secondary {
+    background: transparent;
+    color: var(--text-dark);
+    border: 2px solid var(--accent-blue);
+}
+
+.btn-samplast-secondary:hover {
+    background: var(--accent-blue);
+    color: var(--white);
+    transform: translateY(-3px);
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+
+@media (max-width: 768px) {
+    .modal-samplast-content {
+        width: 95%;
+        max-height: 90vh;
+    }
+    
+    .modal-samplast-header,
+    .modal-samplast-body {
+        padding: 1.5rem;
+    }
+    
+    .card-samplast {
+        padding: 1.5rem;
+    }
+    
+    .stats-grid-samplast {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .gallery-samplast {
+        grid-template-columns: 1fr;
+    }
+}

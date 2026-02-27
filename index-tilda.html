@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LUX PET PLAST - Tilda Style</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Tilda Style -->
+    <link rel="stylesheet" href="styles-tilda.css">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: #1e3a8a;
+        }
+        
+        /* Language Switcher */
+        .lang-switcher {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+            display: flex;
+            gap: 10px;
+            background: white;
+            padding: 10px;
+            border-radius: 50px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .lang-btn {
+            padding: 10px 20px;
+            border: 2px solid #e2e8f0;
+            background: white;
+            color: #64748b;
+            border-radius: 50px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 14px;
+        }
+        
+        .lang-btn:hover {
+            border-color: #2563eb;
+            color: #2563eb;
+        }
+        
+        .lang-btn.active {
+            background: #2563eb;
+            color: white;
+            border-color: #2563eb;
+        }
+        
+        @media (max-width: 768px) {
+            .lang-switcher {
+                top: 10px;
+                right: 10px;
+                padding: 8px;
+            }
+            
+            .lang-btn {
+                padding: 8px 16px;
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+<body class="tilda-page">
+
+    <!-- Language Switcher -->
+    <div class="lang-switcher">
+        <button class="lang-btn active" data-lang="uz">O'zb</button>
+        <button class="lang-btn" data-lang="ru">Рус</button>
+        <button class="lang-btn" data-lang="en">Eng</button>
+    </div>
+
+    <!-- BLOCK 1: COVER - Hero Section -->
+    <section class="tilda-block tilda-cover" id="home">
+        <div class="tilda-container">
+            <div class="tilda-cover-content">
+                <div class="tilda-cover-badge">
+                    ISO 9001:2015 | ISO 22000:2018 | HACCP
+                </div>
+                
+                <h1 class="tilda-cover-title">
+                    Sizning Mahsulotingiz Uchun<br>
+                    Ishonchli Qadoqlash Yechimi
+                </h1>
+                
+                <p class="tilda-cover-subtitle">
+                    6+ yil davomida 200+ kompaniya bizga ishondi. Har kuni 200,000+ idish - bir xil yuqori sifat. FDA tasdiqlangan materiallar, muddatida yetkazish, to'liq sifat kafolati.
+                </p>
+                
+                <div class="tilda-cover-buttons">
+                    <a href="#contact" class="tilda-btn tilda-btn-primary">
+                        Bepul Konsultatsiya Oling
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M5 12h14M12 5l7 7-7 7"/>
+                        </svg>
+                    </a>
+                    <a href="#products" class="tilda-btn tilda-btn-secondary">
+                        Narx So'rang - 1 Soatda Javob
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BLOCK 2: STATS -->
+    <section class="tilda-block tilda-about">
+        <div class="tilda-container">
+            <div class="tilda-stats">
+                <div class="tilda-stat">
+                    <span class="tilda-stat-number">6+</span>
+                    <span class="tilda-stat-label">Yillik Tajriba</span>
+                </div>
+                <div class="tilda-stat">
+                    <span class="tilda-stat-number">200K+</span>
+                    <span class="tilda-stat-label">Kunlik Quvvat</span>
+                </div>
+                <div class="tilda-stat">
+                    <span class="tilda-stat-number">200+</span>
+                    <span class="tilda-stat-label">Hamkorlar</span>
+                </div>
+                <div class="tilda-stat">
+                    <span class="tilda-stat-number">98%</span>
+                    <span class="tilda-stat-label">Mamnuniyat</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BLOCK 3: CERTIFICATES -->
+    <section class="tilda-block tilda-advantages">
+        <div class="tilda-container">
+            <div class="tilda-about-header">
+                <span class="tilda-section-label">Sifat Kafolati</span>
+                <h2 class="tilda-section-title">Nima Uchun Bizga Ishonish Mumkin?</h2>
+                <p class="tilda-section-description">
+                    Xalqaro sertifikatlar - bu sizning mahsulotingiz xavfsizligi va sifati uchun kafolat. Har bir idish qat'iy nazoratdan o'tadi.
+                </p>
+            </div>
+            
+            <div class="tilda-grid tilda-grid-3">
+                <div class="tilda-card tilda-animate">
+                    <div class="tilda-card-icon">🛡️</div>
+                    <h3 class="tilda-card-title">ISO 9001:2015</h3>
+                    <p class="tilda-card-text">
+                        Har bir idish bir xil sifatda - nosozlik 0.01% dan kam
+                    </p>
+                </div>
+                
+                <div class="tilda-card tilda-animate">
+                    <div class="tilda-card-icon">✓</div>
+                    <h3 class="tilda-card-title">ISO 22000:2018</h3>
+                    <p class="tilda-card-text">
+                        Oziq-ovqat uchun 100% xavfsiz - sog'liq uchun xavf yo'q
+                    </p>
+                </div>
+                
+                <div class="tilda-card tilda-animate">
+                    <div class="tilda-card-icon">⚡</div>
+                    <h3 class="tilda-card-title">HACCP</h3>
+                    <p class="tilda-card-text">
+                        Har bir ishlab chiqarish bosqichi nazorat ostida - xavfsizlik kafolati
+                    </p>
+                </div>
+                
+                <div class="tilda-card tilda-animate">
+                    <div class="tilda-card-icon">🌟</div>
+                    <h3 class="tilda-card-title">FDA Approved</h3>
+                    <p class="tilda-card-text">
+                        Xalqaro standartlarga javob beradi - dunyoning istalgan joyida sotish mumkin
+                    </p>
+                </div>
+                
+                <div class="tilda-card tilda-animate">
+                    <div class="tilda-card-icon">🏭</div>
+                    <h3 class="tilda-card-title">GMP Certified</h3>
+                    <p class="tilda-card-text">
+                        Yaxshi ishlab chiqarish amaliyoti standartlari
+                    </p>
+                </div>
+                
+                <div class="tilda-card tilda-animate">
+                    <div class="tilda-card-icon">🌍</div>
+                    <h3 class="tilda-card-title">Ekologik</h3>
+                    <p class="tilda-card-text">
+                        Atrof-muhitga zarar yetkazmaydigan ishlab chiqarish
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BLOCK 4: PRODUCTS -->
+    <section class="tilda-block tilda-about" id="products">
+        <div class="tilda-container">
+            <div class="tilda-about-header">
+                <span class="tilda-section-label">Mahsulotlar</span>
+                <h2 class="tilda-section-title">Sizning Biznesingiz Uchun To'liq Yechim</h2>
+                <p class="tilda-section-description">
+                    Kichik suv shishasidan 19L idishgacha - barcha o'lchamlar va turlar. Yevropa sifatida, O'zbekiston narxida.
+                </p>
+            </div>
+            
+            <div class="tilda-product-grid">
+                <div class="tilda-product-card">
+                    <img src="images/products/pet-preforms.jpg" alt="PET Preformalar" class="tilda-product-image">
+                    <div class="tilda-product-content">
+                        <span class="tilda-product-badge">Eng Mashhur</span>
+                        <h3 class="tilda-product-title">PET Preformalar</h3>
+                        <p class="tilda-product-desc">
+                            12gr dan 700gr gacha - barcha o'lchamlar. FDA tasdiqlangan, hech qanday ta'm yoki hid yo'q. Har bir idish mukammal - nosozlik 0.01% dan kam.
+                        </p>
+                        <a href="#contact" class="tilda-product-link">
+                            Narx So'rang - Tezkor Javob
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M5 12h14M12 5l7 7-7 7"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="tilda-product-card">
+                    <img src="images/products/pp-caps.jpg" alt="PP Qopqoqlar" class="tilda-product-image">
+                    <div class="tilda-product-content">
+                        <span class="tilda-product-badge">Mustahkam</span>
+                        <h3 class="tilda-product-title">PP Qopqoqlar</h3>
+                        <p class="tilda-product-desc">
+                            Yuqori sifatli polipropilen materialdan mustahkam qopqoqlar. Gazli va gazsiz ichimliklar uchun.
+                        </p>
+                        <a href="#contact" class="tilda-product-link">
+                            Batafsil
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M5 12h14M12 5l7 7-7 7"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="tilda-product-card">
+                    <img src="images/products/handles.jpg" alt="Tutqichlar" class="tilda-product-image">
+                    <div class="tilda-product-content">
+                        <span class="tilda-product-badge">Ergonomik</span>
+                        <h3 class="tilda-product-title">Tutqichlar</h3>
+                        <p class="tilda-product-desc">
+                            Ergonomik dizayn va yuqori mustahkamlikka ega PP tutqichlar. Katta hajmli idishlar uchun.
+                        </p>
+                        <a href="#contact" class="tilda-product-link">
+                            Batafsil
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M5 12h14M12 5l7 7-7 7"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BLOCK 5: INTEGRITY - Why Choose Us -->
+    <section class="tilda-block tilda-integrity">
+        <div class="tilda-container">
+            <div class="tilda-split">
+                <div class="tilda-split-image">
+                    <img src="images/gallery/factory-exterior-1.jpg" alt="Zavod">
+                </div>
+                <div class="tilda-split-content">
+                    <span class="tilda-section-label" data-i18n="why_badge">Nima Uchun Biz?</span>
+                    <h2 data-i18n="why_title">200+ Kompaniya Bizni Tanladi. Sabablari:</h2>
+                    <p data-i18n="why_description">
+                        "5 yildan beri birgamiz. Sifat har doim yuqori, yetkazish muddatida. Hech qachon muammo bo'lmagan. Ishonchli hamkor!" - Alisher Karimov, Ichimlik Zavodi Direktori
+                    </p>
+                    <ul class="tilda-features-list">
+                        <li data-i18n="why_feature1">✓ Har bir idish mukammal - Yevropa texnologiyalari</li>
+                        <li data-i18n="why_feature2">✓ Professional jamoa - 20+ yillik tajriba</li>
+                        <li data-i18n="why_feature3">✓ Katta buyurtma ham muddatida - 200K+ quvvat</li>
+                        <li data-i18n="why_feature4">✓ 3-5 kun yetkazish - kechikish yo'q</li>
+                        <li data-i18n="why_feature5">✓ 100% sifat kafolati - pul qaytarish</li>
+                    </ul>
+                    <a href="#contact" class="tilda-btn tilda-btn-dark">
+                        <span data-i18n="contact_btn">Bog'lanish</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BLOCK 6: ADVANTAGES - Features -->
+    <section class="tilda-block tilda-advantages">
+        <div class="tilda-container">
+            <div class="tilda-about-header">
+                <span class="tilda-section-label" data-i18n="services_badge">Xizmatlar</span>
+                <h2 class="tilda-section-title" data-i18n="services_title">Bizning Imkoniyatlarimiz</h2>
+            </div>
+            
+            <div class="tilda-grid tilda-grid-3">
+                <div class="tilda-card">
+                    <div class="tilda-card-icon">🏭</div>
+                    <h3 class="tilda-card-title" data-i18n="service1_title">Zamonaviy Uskunalar</h3>
+                    <p class="tilda-card-text" data-i18n="service1_desc">
+                        HUSKY (Kanada) va NETSTAL (Shveytsariya) uskunalari bilan jihozlangan zavod
+                    </p>
+                </div>
+                
+                <div class="tilda-card">
+                    <div class="tilda-card-icon">👥</div>
+                    <h3 class="tilda-card-title" data-i18n="service2_title">Professional Jamoa</h3>
+                    <p class="tilda-card-text" data-i18n="service2_desc">
+                        100+ malakali xodim, 20+ yillik tajribaga ega muhandislar
+                    </p>
+                </div>
+                
+                <div class="tilda-card">
+                    <div class="tilda-card-icon">⚡</div>
+                    <h3 class="tilda-card-title" data-i18n="service3_title">Yuqori Quvvat</h3>
+                    <p class="tilda-card-text" data-i18n="service3_desc">
+                        Kuniga 200,000+ dona mahsulot ishlab chiqarish quvvati
+                    </p>
+                </div>
+                
+                <div class="tilda-card">
+                    <div class="tilda-card-icon">🚚</div>
+                    <h3 class="tilda-card-title" data-i18n="service4_title">Tezkor Yetkazish</h3>
+                    <p class="tilda-card-text" data-i18n="service4_desc">
+                        O'zbekiston bo'ylab 3-5 kun, MDH davlatlariga 7-14 kun
+                    </p>
+                </div>
+                
+                <div class="tilda-card">
+                    <div class="tilda-card-icon">🛡️</div>
+                    <h3 class="tilda-card-title" data-i18n="service5_title">Sifat Kafolati</h3>
+                    <p class="tilda-card-text" data-i18n="service5_desc">
+                        Har bir partiya laboratoriya tekshiruvidan o'tadi
+                    </p>
+                </div>
+                
+                <div class="tilda-card">
+                    <div class="tilda-card-icon">💰</div>
+                    <h3 class="tilda-card-title" data-i18n="service6_title">Raqobatbardosh Narxlar</h3>
+                    <p class="tilda-card-text" data-i18n="service6_desc">
+                        To'g'ridan-to'g'ri ishlab chiqaruvchidan xarid qilish
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BLOCK 7: GALLERY -->
+    <section class="tilda-block tilda-about">
+        <div class="tilda-container">
+            <div class="tilda-about-header">
+                <span class="tilda-section-label" data-i18n="gallery_badge">Galeriya</span>
+                <h2 class="tilda-section-title" data-i18n="gallery_title">Bizning Zavod</h2>
+                <p class="tilda-section-description" data-i18n="gallery_description">
+                    Zamonaviy uskunalar va professional jamoamiz bilan tanishing
+                </p>
+            </div>
+            
+            <div class="tilda-gallery">
+                <div class="tilda-gallery-item">
+                    <img src="images/gallery/factory-exterior-1.jpg" alt="Zavod binosi">
+                    <div class="tilda-gallery-overlay">
+                        <h3 data-i18n="gallery_item1_title">Zavod Binosi</h3>
+                        <p data-i18n="gallery_item1_desc">Zamonaviy ishlab chiqarish majmuasi</p>
+                    </div>
+                </div>
+                
+                <div class="tilda-gallery-item">
+                    <img src="images/gallery/production-line-1.jpg" alt="Ishlab chiqarish">
+                    <div class="tilda-gallery-overlay">
+                        <h3 data-i18n="gallery_item2_title">Ishlab Chiqarish Liniyasi</h3>
+                        <p data-i18n="gallery_item2_desc">HUSKY va NETSTAL uskunalari</p>
+                    </div>
+                </div>
+                
+                <div class="tilda-gallery-item">
+                    <img src="images/gallery/injection-machine-1.jpg" alt="Uskunalar">
+                    <div class="tilda-gallery-overlay">
+                        <h3 data-i18n="gallery_item3_title">Injection Mashinalar</h3>
+                        <p data-i18n="gallery_item3_desc">Yuqori aniqlikdagi uskunalar</p>
+                    </div>
+                </div>
+                
+                <div class="tilda-gallery-item">
+                    <img src="images/gallery/pet-preforms-variety.jpg" alt="Mahsulotlar">
+                    <div class="tilda-gallery-overlay">
+                        <h3 data-i18n="gallery_item4_title">Mahsulotlar</h3>
+                        <p data-i18n="gallery_item4_desc">Turli xil PET preformalar</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BLOCK 8: CONTACT -->
+    <section class="tilda-block tilda-advantages" id="contact">
+        <div class="tilda-container">
+            <div class="tilda-about-header">
+                <span class="tilda-section-label" data-i18n="contact_badge">Kontaktlar</span>
+                <h2 class="tilda-section-title" data-i18n="contact_title">Biz Bilan Bog'laning</h2>
+            </div>
+            
+            <div class="tilda-contact-grid">
+                <div class="tilda-contact-card">
+                    <span class="tilda-contact-icon">📞</span>
+                    <h3 data-i18n="contact_phone_title">Telefon</h3>
+                    <p>+998 90 123 45 67</p>
+                    <p>+998 71 200 00 00</p>
+                    <small data-i18n="contact_phone_hours">Dush-Juma: 9:00 - 18:00</small>
+                </div>
+                
+                <div class="tilda-contact-card">
+                    <span class="tilda-contact-icon">📧</span>
+                    <h3 data-i18n="contact_email_title">Email</h3>
+                    <p>info@luxpetplast.uz</p>
+                    <p>sales@luxpetplast.uz</p>
+                    <small data-i18n="contact_email_response">24 soat ichida javob beramiz</small>
+                </div>
+                
+                <div class="tilda-contact-card">
+                    <span class="tilda-contact-icon">📍</span>
+                    <h3 data-i18n="contact_address_title">Manzil</h3>
+                    <p data-i18n="contact_address_city">Toshkent viloyati</p>
+                    <p data-i18n="contact_address_country">O'zbekiston</p>
+                    <small data-i18n="contact_address_welcome">Zavodni ko'rishga xush kelibsiz</small>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BLOCK 9: CTA -->
+    <section class="tilda-block tilda-cta">
+        <div class="tilda-container">
+            <div class="tilda-cta-content">
+                <h2 class="tilda-cta-title" data-i18n="cta_title">Savollaringiz Bormi? Biz Javob Berishga Tayyormiz!</h2>
+                <p class="tilda-cta-text" data-i18n="cta_description">
+                    Tezkor javob kafolati: Telefon - 5 daqiqada, Email - 1 soat ichida. Birinchi murojaat qilganlar uchun - BEPUL KONSULTATSIYA!
+                </p>
+                <div class="tilda-cover-buttons">
+                    <a href="tel:+998901234567" class="tilda-btn tilda-btn-primary">
+                        <span data-i18n="cta_call">📞 Hozir Qo'ng'iroq Qiling - Tezkor Javob</span>
+                    </a>
+                    <a href="mailto:info@luxpetplast.uz" class="tilda-btn tilda-btn-secondary">
+                        <span data-i18n="cta_email">📧 Narx So'rang - 1 Soatda Javob</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer style="background: #1e3a8a; color: white; padding: 60px 0 30px; text-align: center;">
+        <div class="tilda-container">
+            <h3 style="font-size: 1.5rem; margin-bottom: 20px;">LUX PET PLAST</h3>
+            <p style="opacity: 0.9; margin-bottom: 30px;" data-i18n="footer_tagline">Professional PET va PP mahsulotlari ishlab chiqaruvchisi</p>
+            <p style="opacity: 0.7; font-size: 0.95rem;">&copy; 2024 LUX PET PLAST. <span data-i18n="footer_rights">Barcha huquqlar himoyalangan.</span></p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="tilda-translations.js"></script>
+    <script>
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+        
+        // Animate on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('tilda-animate');
+                }
+            });
+        }, observerOptions);
+        
+        document.querySelectorAll('.tilda-card').forEach(card => {
+            observer.observe(card);
+        });
+    </script>
+
+</body>
+</html>
