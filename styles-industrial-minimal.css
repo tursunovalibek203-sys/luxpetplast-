@@ -1,0 +1,550 @@
+/* ============================================
+   LUX PET PLAST - INDUSTRIAL MINIMALISM
+   "Raqamli Zavod" - Ultra Clean Factory Aura
+   Tesla/Apple Production Facility Aesthetic
+   ============================================ */
+
+:root {
+    /* Ultra-Clean Industrial Palette */
+    --white: #FFFFFF;
+    --concrete: #F5F5F7;
+    --aseptic-white: #FAFAFA;
+    --matte-black: #1D1D1F;
+    --steel-gray: #86868B;
+    --light-steel: #D2D2D7;
+    --ultra-light: #F9F9F9;
+    
+    /* Accent Colors - USE SPARINGLY */
+    --industrial-orange: #FF6B00;
+    --electric-blue: #0055FF;
+    --accent: var(--electric-blue); /* Change to orange if needed */
+    
+    /* Typography */
+    --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    --font-mono: 'Roboto Mono', 'SF Mono', monospace;
+    
+    /* Precision Spacing - Grid System */
+    --unit: 8px;
+    --spacing-xs: calc(var(--unit) * 1);
+    --spacing-sm: calc(var(--unit) * 2);
+    --spacing-md: calc(var(--unit) * 4);
+    --spacing-lg: calc(var(--unit) * 6);
+    --spacing-xl: calc(var(--unit) * 8);
+    --spacing-2xl: calc(var(--unit) * 12);
+    
+    /* Minimal Shadows - No Heavy Shadows */
+    --shadow-minimal: 0 1px 3px rgba(0, 0, 0, 0.04);
+    --shadow-card: 0 2px 8px rgba(0, 0, 0, 0.06);
+    
+    /* Transitions */
+    --transition: 200ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ============================================
+   RESET & BASE
+   ============================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-primary);
+    color: var(--matte-black);
+    background: var(--concrete);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    letter-spacing: -0.01em;
+}
+
+/* Subtle Grid Pattern - Engineering Blueprint Feel */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: 
+        linear-gradient(rgba(134, 134, 139, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(134, 134, 139, 0.03) 1px, transparent 1px);
+    background-size: 40px 40px;
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* ============================================
+   TYPOGRAPHY - Geometric & Precise
+   ============================================ */
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-primary);
+    font-weight: 700;
+    line-height: 1.1;
+    color: var(--matte-black);
+    letter-spacing: -0.04em; /* Tight kerning */
+}
+
+h1 {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 800;
+}
+
+h2 {
+    font-size: clamp(2rem, 4vw, 3rem);
+}
+
+h3 {
+    font-size: clamp(1.5rem, 3vw, 2rem);
+}
+
+p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--steel-gray);
+}
+
+/* ============================================
+   HEADER - Thin Transparent Bar
+   ============================================ */
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(134, 134, 139, 0.15);
+    z-index: 1000;
+    transition: all var(--transition);
+}
+
+.nav {
+    padding: var(--spacing-md) 0;
+}
+
+.nav .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-lg);
+}
+
+/* Logo - Geometric Minimalist */
+.nav-brand {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    text-decoration: none;
+}
+
+.logo {
+    height: 32px;
+    width: auto;
+}
+
+.brand-name {
+    font-family: var(--font-mono);
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--matte-black);
+    text-transform: lowercase;
+    letter-spacing: 0.05em;
+}
+
+/* Navigation - Lowercase Mono-spaced */
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-lg);
+    list-style: none;
+}
+
+.nav-link {
+    font-family: var(--font-mono);
+    font-size: 0.8125rem;
+    font-weight: 500;
+    color: var(--steel-gray);
+    text-decoration: none;
+    text-transform: lowercase;
+    letter-spacing: 0.02em;
+    transition: color var(--transition);
+    position: relative;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background: var(--accent);
+    transition: width var(--transition);
+}
+
+.nav-link:hover {
+    color: var(--matte-black);
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+    width: 100%;
+}
+
+/* Ghost Button - Request Demo */
+.nav-cta {
+    font-family: var(--font-mono);
+    font-size: 0.8125rem;
+    font-weight: 600;
+    color: var(--matte-black);
+    text-transform: lowercase;
+    padding: var(--spacing-sm) var(--spacing-md);
+    border: 1px solid var(--steel-gray);
+    border-radius: 2px;
+    text-decoration: none;
+    transition: all var(--transition);
+}
+
+.nav-cta:hover {
+    background: var(--matte-black);
+    color: var(--white);
+    border-color: var(--matte-black);
+}
+
+/* ============================================
+   HERO SECTION - 60/40 Split
+   ============================================ */
+
+.hero-industrial {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding-top: 80px;
+    position: relative;
+    background: var(--white);
+}
+
+.hero-industrial .container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-lg);
+    display: grid;
+    grid-template-columns: 60% 40%;
+    gap: var(--spacing-2xl);
+    align-items: center;
+}
+
+/* Left Side - Content */
+.hero-content-industrial {
+    max-width: 600px;
+}
+
+.hero-label {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--steel-gray);
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    margin-bottom: var(--spacing-md);
+}
+
+.hero-title-industrial {
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+    font-weight: 800;
+    color: var(--matte-black);
+    line-height: 1.05;
+    letter-spacing: -0.05em;
+    margin-bottom: var(--spacing-md);
+}
+
+.hero-description-industrial {
+    font-size: 1.125rem;
+    line-height: 1.6;
+    color: var(--steel-gray);
+    margin-bottom: var(--spacing-xl);
+    max-width: 500px;
+}
+
+/* Primary CTA - Solid Accent Color */
+.cta-primary-industrial {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    font-family: var(--font-mono);
+    font-size: 0.875rem;
+    font-weight: 700;
+    color: var(--white);
+    background: var(--accent);
+    padding: var(--spacing-md) var(--spacing-xl);
+    border: none;
+    border-radius: 2px;
+    text-decoration: none;
+    text-transform: lowercase;
+    letter-spacing: 0.05em;
+    transition: all var(--transition);
+    box-shadow: 0 4px 12px rgba(0, 85, 255, 0.2);
+}
+
+.cta-primary-industrial:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(0, 85, 255, 0.3);
+}
+
+/* Right Side - 3D Visual */
+.hero-visual-industrial {
+    position: relative;
+    height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-visual-industrial img {
+    max-width: 100%;
+    height: auto;
+    filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.1));
+}
+
+/* ============================================
+   FEATURES GRID - Clean 3/4 Column
+   ============================================ */
+
+.section-industrial {
+    padding: var(--spacing-2xl) 0;
+    position: relative;
+    background: var(--white);
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-lg);
+}
+
+.section-header-industrial {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto var(--spacing-2xl);
+}
+
+.section-label {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--steel-gray);
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    margin-bottom: var(--spacing-sm);
+}
+
+.section-title-industrial {
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 800;
+    color: var(--matte-black);
+    line-height: 1.1;
+    letter-spacing: -0.04em;
+    margin-bottom: var(--spacing-md);
+}
+
+.section-description-industrial {
+    font-size: 1.125rem;
+    line-height: 1.6;
+    color: var(--steel-gray);
+}
+
+/* Features Grid - Separated by 1px Lines */
+.features-grid-industrial {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0;
+    border: 1px solid var(--light-steel);
+}
+
+.feature-cell {
+    padding: var(--spacing-xl);
+    border-right: 1px solid var(--light-steel);
+    border-bottom: 1px solid var(--light-steel);
+    transition: background var(--transition);
+}
+
+.feature-cell:nth-child(3n) {
+    border-right: none;
+}
+
+.feature-cell:hover {
+    background: var(--aseptic-white);
+}
+
+/* Minimalist Wireframe Icon */
+.feature-icon-minimal {
+    width: 48px;
+    height: 48px;
+    margin-bottom: var(--spacing-md);
+}
+
+.feature-icon-minimal svg {
+    width: 100%;
+    height: 100%;
+    stroke: var(--accent);
+    stroke-width: 1.5;
+    fill: none;
+}
+
+.feature-title-minimal {
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: var(--matte-black);
+    margin-bottom: var(--spacing-sm);
+    letter-spacing: -0.02em;
+}
+
+.feature-description-minimal {
+    font-size: 0.9375rem;
+    line-height: 1.6;
+    color: var(--steel-gray);
+}
+
+/* ============================================
+   DATA/TRUST SECTION - Large Animated Numbers
+   ============================================ */
+
+.trust-section-industrial {
+    padding: var(--spacing-2xl) 0;
+    background: var(--matte-black);
+    color: var(--white);
+}
+
+.trust-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--spacing-xl);
+    text-align: center;
+}
+
+.trust-stat {
+    padding: var(--spacing-lg);
+}
+
+.trust-number {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 800;
+    color: var(--white);
+    line-height: 1;
+    letter-spacing: -0.04em;
+    margin-bottom: var(--spacing-sm);
+}
+
+.trust-number span {
+    color: var(--accent);
+}
+
+.trust-label {
+    font-family: var(--font-mono);
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--steel-gray);
+    text-transform: lowercase;
+    letter-spacing: 0.05em;
+}
+
+/* ============================================
+   CARDS - Flat with Minimal Shadow
+   ============================================ */
+
+.card-industrial {
+    background: var(--white);
+    border: 1px solid var(--light-steel);
+    padding: var(--spacing-xl);
+    transition: all var(--transition);
+}
+
+.card-industrial:hover {
+    box-shadow: var(--shadow-card);
+    transform: translateY(-2px);
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+
+@media (max-width: 1024px) {
+    .hero-industrial .container {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-xl);
+    }
+    
+    .features-grid-industrial {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .feature-cell:nth-child(2n) {
+        border-right: none;
+    }
+    
+    .trust-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-menu {
+        display: none;
+    }
+    
+    .features-grid-industrial {
+        grid-template-columns: 1fr;
+    }
+    
+    .feature-cell {
+        border-right: none;
+    }
+    
+    .trust-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .hero-visual-industrial {
+        height: 400px;
+    }
+}
+
+/* ============================================
+   UTILITY CLASSES
+   ============================================ */
+
+.text-center {
+    text-align: center;
+}
+
+.text-accent {
+    color: var(--accent);
+}
+
+.bg-white {
+    background: var(--white);
+}
+
+.bg-concrete {
+    background: var(--concrete);
+}
+
+.bg-black {
+    background: var(--matte-black);
+}
+
+/* No Gradients - Flat Design Only */
+/* Dimension comes from high-quality imagery and 3D renders */
