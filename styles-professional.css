@@ -67,7 +67,7 @@ html {
 body {
     font-family: var(--font-primary);
     color: var(--text-gray);
-    background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
+    background: linear-gradient(135deg, #020617 0%, #0f172a 50%, #1e293b 100%);
     background-attachment: fixed;
     line-height: 1.6;
     -webkit-font-smoothing: antialiased;
@@ -142,17 +142,17 @@ p {
     top: 0;
     left: 0;
     right: 0;
-    background: rgba(15, 23, 42, 0.85);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(15, 23, 42, 0.98);
+    border-bottom: 1px solid rgba(59, 130, 246, 0.3);
     z-index: 1000;
     transition: all var(--transition);
-    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.6);
 }
 
 .header.scrolled {
-    background: rgba(15, 23, 42, 0.95);
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
-    border-bottom-color: rgba(255, 255, 255, 0.15);
+    background: rgba(15, 23, 42, 1);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.7);
+    border-bottom-color: rgba(59, 130, 246, 0.4);
 }
 
 .nav {
@@ -209,7 +209,7 @@ p {
 .nav-link {
     font-size: 0.9375rem;
     font-weight: 600;
-    color: rgba(255, 255, 255, 0.85);
+    color: white;
     text-decoration: none;
     transition: all var(--transition);
     padding: 0.75rem 0;
@@ -284,21 +284,14 @@ p {
     min-height: 100vh;
     display: flex;
     align-items: center;
-    background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 50%, #1e40af 100%);
+    background: linear-gradient(135deg, #020617 0%, #0f172a 50%, #1e3a8a 100%);
     padding: 8rem 0 4rem;
     position: relative;
     overflow: hidden;
 }
 
 .hero-corporate::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: none;
-    pointer-events: none;
+    display: none;
 }
 
 .hero-content-corporate {
@@ -450,8 +443,7 @@ p {
 
 .section-description {
     font-size: 1.125rem;
-    color: rgba(255, 255, 255, 0.85);
-    color: var(--gray-600);
+    color: white;
     line-height: 1.7;
 }
 
@@ -566,7 +558,7 @@ p {
 }
 
 .card-corporate p {
-    color: rgba(255, 255, 255, 0.75);
+    color: white;
     line-height: 1.7;
     font-size: 1rem;
     margin-bottom: 1rem;
@@ -2696,14 +2688,11 @@ a, button, input, select, textarea {
     left: -50%;
     width: 200%;
     height: 200%;
-    background: linear-gradient(45deg, transparent 30%, rgba(37, 99, 235, 0.05) 50%, transparent 70%);
-    animation: shimmer 3s ease-in-out infinite;
+    background: none;
+    animation: none;
 }
 
-@keyframes shimmer {
-    0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
-    100% { transform: translateX(100%) translateY(100%) rotate(45deg); }
-}
+/* Shimmer animation removed - no moving blur */
 
 .product-image-placeholder p {
     margin-top: 1rem;
@@ -2902,20 +2891,15 @@ a, button, input, select, textarea {
    ENHANCED HERO ANIMATIONS
    ============================================ */
 
-/* Floating elements animation */
-@keyframes float {
-    0%, 100% { transform: translateY(0px); }
-    50% { transform: translateY(-10px); }
-}
-
+/* Floating animation removed */
 .hero-badge {
-    animation: float 3s ease-in-out infinite;
+    animation: none;
 }
 
-.stat-item:nth-child(1) { animation: float 3s ease-in-out infinite 0.5s; }
-.stat-item:nth-child(2) { animation: float 3s ease-in-out infinite 1s; }
-.stat-item:nth-child(3) { animation: float 3s ease-in-out infinite 1.5s; }
-.stat-item:nth-child(4) { animation: float 3s ease-in-out infinite 2s; }
+.stat-item:nth-child(1) { animation: none; }
+.stat-item:nth-child(2) { animation: none; }
+.stat-item:nth-child(3) { animation: none; }
+.stat-item:nth-child(4) { animation: none; }
 
 /* Enhanced card hover effects */
 .card-corporate {
